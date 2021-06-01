@@ -18,7 +18,7 @@
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\.mappview\data\wwwroot\brvisu\widgets\brease\numpad\meta\numpad_copied.markerfile" LastWriteTime="2021-06-01 13:00:18" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\.mappview\data\wwwroot\brvisu\widgets\brease\keyboard\meta\keyboard_copied.markerfile" LastWriteTime="2021-06-01 13:00:22" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\.mappview\data\wwwroot\brvisu\widgets\brease\datetimepicker\meta\datetimepicker_copied.markerfile" LastWriteTime="2021-06-01 13:00:24" />
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\iat_media.job" LastWriteTime="2021-06-01 19:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\iat_media.job" LastWriteTime="2021-06-01 21:19:44" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\iat_media.job._markerfile" LastWriteTime="1601-01-01 00:00:00" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\.mappview\data\wwwroot\transformations\eventbinding\parametertypemapping.xml" LastWriteTime="2021-06-01 13:09:12" />
     <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\.mappview\validateeventbindings._markerfile" LastWriteTime="2021-06-01 13:09:10" />
@@ -133,7 +133,7 @@
     <CommandLine Parameter="-category CopyDirectory -i &quot;C:/BrAutomation/AS49/AS/TechnologyPackages/mappView/5.12.1/Widgets/brease/DateTimePicker&quot; -o &quot;D:/Studia/VI/Myjnia/Myjnia/Temp/Objects/Config1/X20CP1382/.mappView/data/wwwRoot/BRVisu/widgets/brease/DateTimePicker&quot; -markerFile &quot;D:/Studia/VI/Myjnia/Myjnia/Temp/Objects/Config1/X20CP1382/.mappView/data/wwwRoot/BRVisu/widgets/brease/DateTimePicker/meta/DateTimePicker_Copied.markerFile&quot; -cultureName &quot;pl-PL&quot; -uiCultureName &quot;en-US&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\iat_media.job._markerfile">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\iat_media.job" LastWriteTime="2021-06-01 19:44:54" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\iat_media.job" LastWriteTime="2021-06-01 21:19:44" />
     <CommandLine Parameter="-category BulkCopy -i &quot;D:/Studia/VI/Myjnia/Myjnia/Temp/Objects/Config1/X20CP1382/IAT_MEDIA.job&quot; -o &quot;D:/Studia/VI/Myjnia/Myjnia/Temp/Objects/Config1/X20CP1382/IAT_MEDIA.job._markerfile&quot; -markerFile &quot;D:/Studia/VI/Myjnia/Myjnia/Temp/Objects/Config1/X20CP1382/IAT_MEDIA.job._markerfile&quot; -cultureName &quot;pl-PL&quot; -uiCultureName &quot;en-US&quot;" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\.mappview\data\wwwroot\index.html">
@@ -832,7 +832,7 @@
     <CommandLine Parameter="&quot;Visu&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP1382\Visu.br&quot; -T SG4 -B B4.83 -c &quot;Config1&quot; -S &quot;X20CP1382&quot; -P &quot;$(AS_PROJECT_PATH)&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -H &quot;$(AS_PROJECT_PATH)\Physical\Config1\Hardware.hw&quot; -V &quot;V4.72.2&quot; -apj &quot;Myjnia&quot; -v V1.00.0 -m &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP1382\ConfigInfo.cfi&quot; -g &quot;$(AS_PROJECT_PATH)\Temp\Objects\Declarations.lst&quot; -w2 -sfas" />
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\visu.br">
-    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\visu\visu.mak" LastWriteTime="2021-06-01 19:45:06" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1382\visu\visu.mak" LastWriteTime="2021-06-01 21:19:50" />
     <CommandLine Parameter=" -r -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Config1\X20CP1382\#cpu_vc.mak&quot; -k" />
   </Rule>
   <Rule ID="#cpu_tp.mak">
