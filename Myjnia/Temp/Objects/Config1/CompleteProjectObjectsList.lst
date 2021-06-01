@@ -5,7 +5,7 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Logical\Package.pkg"
     LogicalPath=""
     Type="Package.ParentUnknown"
-    LastWriteTime="132670132580000000" />
+    LastWriteTime="132670220500000000" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Logical\Global.typ"
     LogicalPath="Global.typ"
@@ -130,7 +130,7 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Logical\Images\Package.pkg"
     LogicalPath="Images"
     Type="Package"
-    LastWriteTime="132670132260000000" />
+    LastWriteTime="132670220500000000" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\Config.pkg"
     LogicalPath="Config1"
@@ -140,24 +140,24 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\Hardware.hw"
     LogicalPath="Config1.Hardware.hw"
     Type="File"
-    LastWriteTime="132670147520000000"
+    LastWriteTime="132670502880000000"
     Private="false" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\Hardware.hwl"
     LogicalPath="Config1.Hardware.hwl"
     Type="File"
-    LastWriteTime="132660047320000000"
+    LastWriteTime="132670220520000000"
     Private="false" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.pkg"
     LogicalPath="Config1.X20CP1382"
     Type="Cpu"
-    LastWriteTime="132670148340000000" />
+    LastWriteTime="132670498040000000" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.sw"
     LogicalPath="Config1.X20CP1382.Cpu.sw"
     Type="File"
-    LastWriteTime="132670127220000000"
+    LastWriteTime="132670236500000000"
     Private="false" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.per"
@@ -309,7 +309,7 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\mappView\Package.pkg"
     LogicalPath="Config1.X20CP1382.mappView"
     Type="Package"
-    LastWriteTime="132660045100000000" />
+    LastWriteTime="132670249420000000" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\mappVision\Package.pkg"
     LogicalPath="Config1.X20CP1382.mappVision"
@@ -324,17 +324,17 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\VC\Package.pkg"
     LogicalPath="Config1.X20CP1382.VC"
     Type="Package"
-    LastWriteTime="132670129680000000" />
+    LastWriteTime="132670497060000000" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\VC\PS2-Keyboard.dis"
     LogicalPath="Config1.X20CP1382.VC.PS2-Keyboard.dis"
     Type="File"
-    LastWriteTime="132670129680000000"
+    LastWriteTime="132670497060000000"
     Private="false" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\Hardware.jpg"
     LogicalPath="Config1.Hardware.jpg"
     Type="File"
-    LastWriteTime="132660047320000000"
+    LastWriteTime="132670220520000000"
     Private="false" />
 </Objects>

@@ -126,7 +126,8 @@
   <Symbol Name="\Projects\Visu\Language\de\BitmapGroups\POBJ" Index="0" Type="BMPG" RefString="Source[local].BitmapGroup[BitmapGroup_1_de]" />
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="0" Type="GFX" RefString="Source[local].Bitmap[Bitmap_1]" />
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="1" Type="GFX" RefString="Source[local].Bitmap[Bitmap_2]" />
-  <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="0" Type="LOC" RefString="Source[local].Localizer[en]" />
-  <Symbol Name="\Projects\Visu\LogFonts" Index="0" Type="FNT" RefString="Source[local].Font[DefaultFont]" />
+  <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="2" Type="GFX" RefString="Source[local].Bitmap[Bitmap_3]" />
   <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="1" Type="LOC" RefString="Source[local].Localizer[de]" />
+  <Symbol Name="\Projects\Visu\LogFonts" Index="0" Type="FNT" RefString="Source[local].Font[DefaultFont]" />
+  <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="0" Type="LOC" RefString="Source[local].Localizer[pl]" />
 </SymbolTable>

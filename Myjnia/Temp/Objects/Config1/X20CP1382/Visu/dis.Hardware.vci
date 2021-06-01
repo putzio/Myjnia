@@ -295,7 +295,7 @@
         <Property Name="Authentication" Value="True" />
         <Property Name="Password" Value="c" />
         <Property Name="ReadOnlyPassword" Value="v" />
-        <Property Name="MaxClients" Value="10" />
+        <Property Name="MaxClients" Value="1" />
         <Property Name="Title" Value="" />
         <Property Name="Timeout" Value="4" />
         <Property Name="NodeNumber" Value="5900" />

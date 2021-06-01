@@ -4,6 +4,7 @@
   <OperatingSystem Version="B4.83"/>
   <Hardware Target="SG4"/>
   <Operation Delete="Visu.br"/>
+  <Operation Delete="mvLoader.br"/>
   <Operation Delete="vcfile.br"/>
   <Operation Delete="vcfntttf.br"/>
   <Operation Delete="vcdsloc.br"/>
@@ -24,6 +25,7 @@
   <Operation Delete="Visu03.br"/>
   <Operation Delete="Visu02.br"/>
   <Operation Delete="Visu01.br"/>
+  <Operation Delete="arssl.br"/>
   <Operation Delete="dataobj.br"/>
   <Operation Delete="vcgclass.br"/>
   <Operation Delete="fileio.br"/>
@@ -39,18 +41,19 @@
   <Operation Download="fileio.br" Memory="UserROM"/>
   <Operation Download="vcgclass.br" Memory="UserROM"/>
   <Operation Download="dataobj.br" Memory="UserROM"/>
+  <Operation Download="arssl.br" Memory="UserROM"/>
   <Operation Download="Visu01.br" Memory="UserROM"/>
   <Operation Download="Visu02.br" Memory="UserROM"/>
   <Operation Download="Visu03.br" Memory="UserROM"/>
   <Operation Download="arial.br" Memory="UserROM"/>
   <Operation Download="vcshared.br" Memory="UserROM"/>
-  <Operation Download="udbdef.br" Memory="UserROM"/>
-  <Operation Download="ashwac.br" Memory="UserROM"/>
-  <Operation Download="Role.br" Memory="UserROM"/>
-  <Operation Download="User.br" Memory="UserROM"/>
   <Operation Download="FWRules.br" Memory="UserROM"/>
-  <Operation Download="iomap.br" Memory="UserROM"/>
+  <Operation Download="Role.br" Memory="UserROM"/>
   <Operation Download="TCData.br" Memory="SystemROM"/>
+  <Operation Download="User.br" Memory="UserROM"/>
+  <Operation Download="ashwac.br" Memory="UserROM"/>
+  <Operation Download="iomap.br" Memory="UserROM"/>
+  <Operation Download="udbdef.br" Memory="UserROM"/>
   <Operation Download="vcpdsw.br" Memory="UserROM"/>
   <Operation Download="vctcal.br" Memory="UserROM"/>
   <Operation Download="vcpdvnc.br" Memory="UserROM"/>
@@ -66,5 +69,6 @@
   <Operation Download="vcdsloc.br" Memory="UserROM"/>
   <Operation Download="vcfntttf.br" Memory="UserROM"/>
   <Operation Download="vcfile.br" Memory="UserROM"/>
+  <Operation Download="mvLoader.br" Memory="UserROM"/>
   <Operation Download="Visu.br" Memory="UserROM"/>
 </Transfer>
