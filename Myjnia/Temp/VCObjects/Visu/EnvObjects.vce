@@ -32,9 +32,9 @@
       <Property Name="ParentObjectName" Value="Page_1"/>
       <Property Name="ParentObjectType" Value="Page"/>
       <Property Name="ShowCmd" Value="3"/>
-      <Property Name="WndPosBottom" Value="459"/>
+      <Property Name="WndPosBottom" Value="458"/>
       <Property Name="WndPosLeft" Value="38"/>
-      <Property Name="WndPosRight" Value="913"/>
+      <Property Name="WndPosRight" Value="559"/>
       <Property Name="WndPosTop" Value="38"/>
       <Views>
         <View>

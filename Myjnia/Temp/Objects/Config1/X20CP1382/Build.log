@@ -1,5 +1,5 @@
 Myjnia | Config1 | Build
-BR.VC.AnalyseObject.exe, Error = False. Call = BR.VC.AnalyseObject.exe "Visu" -o "D:\Studia\VI\Myjnia\Myjnia\Temp\Objects\Config1\X20CP1382\Visu.br" -T SG4 -B B4.83 -c "Config1" -S "X20CP1382" -P "D:\Studia\VI\Myjnia\Myjnia" -t "D:\Studia\VI\Myjnia\Myjnia\Temp" -H "D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\Hardware.hw" -V "V4.72.2" -apj "Myjnia" -v V1.00.0 -m "D:\Studia\VI\Myjnia\Myjnia\Temp\Objects\Config1\X20CP1382\ConfigInfo.cfi" -g "D:\Studia\VI\Myjnia\Myjnia\Temp\Objects\Declarations.lst" -w2 -sfas
-mingw32-make.exe, Error = False. Call = mingw32-make.exe  -r -f "D:\Studia\VI\Myjnia\Myjnia\Temp\Objects\Config1\X20CP1382\#cpu_vc.mak" -k
-mingw32-make.exe, Error = False. Call = mingw32-make.exe  -r -f "D:\Studia\VI\Myjnia\Myjnia\Temp\Objects\Config1\X20CP1382\#cpu_tp.mak" -k
-BR.AS.FinalizeBuild.exe, Error = False. Call = BR.AS.FinalizeBuild.exe  "D:\Studia\VI\Myjnia\Myjnia\Myjnia.apj" -t "D:\Studia\VI\Myjnia\Myjnia\Temp" -o "D:\Studia\VI\Myjnia\Myjnia\Binaries" -c "Config1" -i "C:\BrAutomation\AS49" -S "X20CP1382" -A "X20CP1382" -pil -swFiles "D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.sw" -Z "Connectivity: n.d, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, RemanentData: n.d, AAS: n.d" -C "/RT=1000 /AM=*" -D "/IF=COM1 /BD=57600 /PA=2 /IT=20 /RS=0" -M IA32 -T SG4
+System error.
+   at BR.AS.AnalyseProject.DataClasses.DataAndTools.StopExecutionOnFatalErrorAndUserCancelation()
+   at BR.AS.AnalyseProject.Comparison.CompareSettingsAndObjects()
+   at BR.AS.AnalyseProject.Analyse.Execute()

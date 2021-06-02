@@ -140,7 +140,11 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\Hardware.hw"
     LogicalPath="Config1.Hardware.hw"
     Type="File"
+<<<<<<< HEAD
     LastWriteTime="132670974100000000"
+=======
+    LastWriteTime="132670502880000000"
+>>>>>>> Visu
     Private="false" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\Hardware.hwl"
@@ -152,7 +156,11 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.pkg"
     LogicalPath="Config1.X20CP1382"
     Type="Cpu"
+<<<<<<< HEAD
     LastWriteTime="132671071800000000" />
+=======
+    LastWriteTime="132670503900000000" />
+>>>>>>> Visu
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.sw"
     LogicalPath="Config1.X20CP1382.Cpu.sw"

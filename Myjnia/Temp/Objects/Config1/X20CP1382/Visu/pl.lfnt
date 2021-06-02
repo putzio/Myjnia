@@ -2,9 +2,15 @@
   <LogicalFont Name="DefaultFont">
     <Property Name="PhysicalFont" Value="arial" />
     <Property Name="Width" Value="0" />
+<<<<<<< HEAD
     <Property Name="Height" Value="9" />
     <Property Name="Index" Value="0" />
     <Property Name="FontSize" Value="15" />
+=======
+    <Property Name="Height" Value="12" />
+    <Property Name="Index" Value="0" />
+    <Property Name="FontSize" Value="13" />
+>>>>>>> Visu
     <Property Name="AntiAliasing" Value="False" />
   </LogicalFont>
 </Language>

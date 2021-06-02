@@ -1,3 +1,7 @@
 <?xml version="1.0"?>
 <?AutomationStudio FileVersion="4.9"?>
+<<<<<<< HEAD
 <Project xmlns="http://br-automation.co.at/AS/Project"><Active ID="0"/><Configuration Name="Config1"/><ConfigurationFiles xmlns="" ConfigurationName="Config1" ActiveConfigurationFile="\Logical\Visu\VCObject.vc"><ConfigurationFile Placement="\Virtual\X20CP1382.IF2.hw,,1,44,0,1,-1,-1,-1,-1,2,34,1250,547"/><ConfigurationFile Placement="\Logical\Visu\VCObject.vc,,0,44,0,1,-1,-1,-1,-1,2,34,1250,547"/></ConfigurationFiles></Project>
+=======
+<Project xmlns="http://br-automation.co.at/AS/Project"><Active ID="0"/><Configuration Name="Config1"/><ConfigurationFiles xmlns="" ConfigurationName="Config1" ActiveConfigurationFile="\Virtual\X20CP1382.IF2.hw"><ConfigurationFile Placement="\Virtual\X20CP1382.IF2.hw,,1,44,0,1,-1,-1,-1,-1,2,34,1250,672"/></ConfigurationFiles></Project>
+>>>>>>> Visu

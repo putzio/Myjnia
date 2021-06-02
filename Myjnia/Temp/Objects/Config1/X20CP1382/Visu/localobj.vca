@@ -246,8 +246,13 @@
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x0000101C" Index="1073741855" Type="SC" RefString="Source[local].StyleGroup[0x0000101C].StyleClass[Color.Empty]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x0000101F" Index="1073741856" Type="SC" RefString="Source[local].StyleGroup[0x0000101F].StyleClass[Color.Empty]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x00001020" Index="1073741857" Type="SC" RefString="Source[local].StyleGroup[0x00001020].StyleClass[Color.Empty]" />
+<<<<<<< HEAD
   <Symbol Name="\Projects\Visu\VKeys\Common" Index="1073741824" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_4]#\Projects\Visu\VKeys\Common" />
   <Symbol Name="\Projects\Visu\VKeys\Common" Index="1073741825" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_5]#\Projects\Visu\VKeys\Common" />
   <Symbol Name="\Projects\Visu\VKeys\Common" Index="1073741826" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_6]#\Projects\Visu\VKeys\Common" />
   <Symbol Name="\Projects\Visu\VKeys\Common" Index="1073741827" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_7]#\Projects\Visu\VKeys\Common" />
+=======
+  <Symbol Name="\Projects\Visu\Language\pl\TextGroups\POBJ" Index="0" Type="TG" RefString="Source[local].TextGroup[TextGroup_1].Language[pl]" />
+  <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="0" Type="TG" RefString="Source[local].TextGroup[TextGroup_1].Language[de]" />
+>>>>>>> Visu
 </SymbolTable>

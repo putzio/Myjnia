@@ -24,6 +24,6 @@
     <Property Name="GridSizeY" Value="10"/>
     <Property Name="GridVisible" Value="0"/>
     <Property Name="ShowGridAtZoom" Value="0"/>
-    <Property Name="SnapToGrid" Value="0"/>
+    <Property Name="SnapToGrid" Value="1"/>
   </GridSettings>
 </EnvironmentSettings>

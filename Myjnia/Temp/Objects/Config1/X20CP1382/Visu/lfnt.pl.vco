@@ -14,8 +14,13 @@
             <String Name="PhysicalFontName" Encoding="ASCII">arial</String>
             <Binary Name="FillData" Encoding="Base64">AAAAAAAAAAAAAAAAAAAAAAAA</Binary>
             <UInt32 Name="DefaultWidth">0</UInt32>
+<<<<<<< HEAD
             <UInt32 Name="DefaultHeight">9</UInt32>
             <UInt32 Name="FontSize">15</UInt32>
+=======
+            <UInt32 Name="DefaultHeight">12</UInt32>
+            <UInt32 Name="FontSize">13</UInt32>
+>>>>>>> Visu
             <UInt32 Name="Index">0</UInt32>
             <UInt32 Name="AntiAliasing">0</UInt32>
           </Symbol>
