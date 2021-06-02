@@ -69,10 +69,13 @@ KEYMAP_SOURCES_Visu=$(AS_PROJECT_PATH)/Physical/Config1/X20CP1382/VC/PS2-Keyboar
 KEYMAP_OBJECTS_Visu=$(TEMP_PATH_Visu)/dis.PS2-Keyboard.vco 
 
 # All Source Objects
+TXTGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/TextGroup_1.txtgrp 
+
 FNINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Fonts/DefaultFont.fninfo 
 
 BMINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo \
-	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_2.bminfo 
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_2.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.bminfo 
 
 BMGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/BitmapGroup_1.bmgrp 
 
@@ -136,6 +139,18 @@ $(VCVK_OBJECTS_Visu): $(VC_LANGUAGES_Visu)
 
 
 
+# Text Groups
+TXTGRP_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/txtgrp., $(notdir $(TXTGRP_SOURCES_Visu:.txtgrp=.vco)))
+
+$(TEMP_PATH_Visu)/txtgrp.TextGroup_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/TextGroup_1.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+#Text Groups END
+
+
+
+
 # BitmapGroups
 BMGRP_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/bmgrp., $(notdir $(BMGRP_SOURCES_Visu:.bmgrp=.vco)))
 
@@ -159,6 +174,10 @@ $(TEMP_PATH_Visu)/bminfo.Bitmap_2.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/B
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
+$(TEMP_PATH_Visu)/bminfo.Bitmap_3.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.jpg
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
 #Bitmaps END
 
 
@@ -177,15 +196,15 @@ $(TEMP_PATH_Visu)/tdc.TrendData.vco: $(AS_PROJECT_PATH)/Logical/Visu/Trends/Tren
 #
 # Logical fonts
 #
-$(TEMP_PATH_Visu)/lfnt.en.vco: $(TEMP_PATH_Visu)/en.lfnt $(VC_LANGUAGES_Visu)
-	 $(VCC) -f '$<' -o '$@' $(LFNTFLAGS_Visu) $(VCCFLAGS_Visu) -p Visu -sfas
 $(TEMP_PATH_Visu)/lfnt.de.vco: $(TEMP_PATH_Visu)/de.lfnt $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' $(LFNTFLAGS_Visu) $(VCCFLAGS_Visu) -p Visu -sfas
-LFNT_OBJECTS_Visu=$(TEMP_PATH_Visu)/lfnt.en.vco $(TEMP_PATH_Visu)/lfnt.de.vco 
+$(TEMP_PATH_Visu)/lfnt.pl.vco: $(TEMP_PATH_Visu)/pl.lfnt $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' $(LFNTFLAGS_Visu) $(VCCFLAGS_Visu) -p Visu -sfas
+LFNT_OBJECTS_Visu=$(TEMP_PATH_Visu)/lfnt.de.vco $(TEMP_PATH_Visu)/lfnt.pl.vco 
 
 #Runtime Object
 $(VCR_OBJECT_Visu) : $(VCR_SOURCE_Visu)
-	$(VCC) -f '$<' -o '$@' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -sl en $(VCCFLAGS_Visu) -rt  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+	$(VCC) -f '$<' -o '$@' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -sl pl $(VCCFLAGS_Visu) -rt  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 # Local resources Library rules
 LIB_LOCAL_RES_Visu=$(TEMP_PATH_Visu)/localres.vca
 $(LIB_LOCAL_RES_Visu) : $(TEMP_PATH_Visu)/Visu02.ccf

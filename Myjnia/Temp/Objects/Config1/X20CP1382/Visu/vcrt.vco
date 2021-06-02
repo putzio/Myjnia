@@ -12,7 +12,7 @@
       <Reference Name="DefaultPage" Type="PAGE">Source[local].Page[Page_1]</Reference>
       <Reference Name="ConnectionErrorPage" Type="ConnectionErrorPage">None</Reference>
       <UInt32 Name="ServicePage">4294967295</UInt32>
-      <Reference Name="DefaultLanguage" Type="LOC">Source[local].Localizer[en]</Reference>
+      <Reference Name="DefaultLanguage" Type="LOC">Source[local].Localizer[pl]</Reference>
       <Reference Name="DefaultStyleSheet" Type="SS">Source[local].StyleSheet[Color]</Reference>
       <Reference Name="KeyLevelChangeDP" Type="DP">None</Reference>
       <Reference Name="KeyLevelCurrentDP" Type="DP">None</Reference>

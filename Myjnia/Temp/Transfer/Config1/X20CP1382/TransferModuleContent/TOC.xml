@@ -31,31 +31,34 @@
 			<File Name="arsimproxy.dll" Size="211968" HashValue="9A1728B6833316FCC27A0C0E7B3D2E54" ProjectDependent="1" IgnoreDifference="0" />
 		</Class>
 		<Memory Name="SYSROM">
-			<Module Name="::$$sysconf" Type="129" Size="67992" Modified="2021-06-01 11:50:50" Version="4.83" ProjectDependent="1" Reboot="1" />
-			<Module Name="::TCData" Type="209" Size="3772264" Modified="2021-06-01 11:50:59" Version="1.00" ProjectDependent="1" />
-			<Module Name="::arconfig" Type="132" Size="5368" Modified="2021-06-01 11:50:49" Version="1.00" ProjectDependent="1" Reboot="1" />
-			<Module Name="::asfw" Type="67" Size="279028" Modified="2021-06-01 11:50:51" Version="1.00" ProjectDependent="1" Reboot="1" />
-			<Module Name="::ashwd" Type="67" Size="4948" Modified="2021-06-01 11:50:52" Version="1.00" ProjectDependent="1" Reboot="1" />
+			<Module Name="::$$sysconf" Type="129" Size="67992" Modified="2021-06-02 13:37:29" Version="4.83" ProjectDependent="1" Reboot="1" />
+			<Module Name="::TCData" Type="209" Size="3772264" Modified="2021-06-02 13:37:39" Version="1.00" ProjectDependent="1" />
+			<Module Name="::arconfig" Type="132" Size="5368" Modified="2021-06-02 13:37:29" Version="1.00" ProjectDependent="1" Reboot="1" />
+			<Module Name="::asfw" Type="67" Size="279028" Modified="2021-06-02 13:37:31" Version="1.00" ProjectDependent="1" Reboot="1" />
+			<Module Name="::ashwd" Type="67" Size="4948" Modified="2021-06-02 13:37:32" Version="1.00" ProjectDependent="1" Reboot="1" />
 		</Memory>
 		<Memory Name="USERROM">
 			<Module Name="::DataObj" Type="18" Size="13788" Modified="2020-12-04 22:34:51" Version="4.83" ProjectDependent="1" />
-			<Module Name="::FWRules" Type="136" Size="456" Modified="2021-06-01 11:50:49" Version="1.00" ProjectDependent="1" />
+			<Module Name="::FWRules" Type="136" Size="456" Modified="2021-06-02 13:37:27" Version="1.00" ProjectDependent="1" />
 			<Module Name="::FileIO" Type="18" Size="25328" Modified="2020-12-04 22:35:09" Version="4.83" ProjectDependent="1" />
-			<Module Name="::Role" Type="136" Size="760" Modified="2021-06-01 11:50:48" Version="1.00" ProjectDependent="1" />
-			<Module Name="::User" Type="136" Size="648" Modified="2021-06-01 11:50:48" Version="1.00" ProjectDependent="1" />
-			<Module Name="::Visu" Type="18" Size="1844" Modified="2021-06-01 11:54:33" Version="1.00" ProjectDependent="1" />
-			<Module Name="::Visu01" Type="18" Size="10684" Modified="2021-06-01 11:54:32" Version="1.00" ProjectDependent="1" />
-			<Module Name="::Visu02" Type="18" Size="880" Modified="2021-06-01 11:51:14" Version="1.00" ProjectDependent="1" />
-			<Module Name="::Visu03" Type="18" Size="427588" Modified="2021-06-01 11:51:15" Version="1.00" ProjectDependent="1" />
-			<Module Name="::arial" Type="18" Size="1045436" Modified="2021-06-01 11:51:15" Version="1.00" ProjectDependent="1" />
-			<Module Name="::ashwac" Type="136" Size="212" Modified="2021-06-01 11:50:48" Version="1.00" ProjectDependent="1" />
-			<Module Name="::iomap" Type="50" Size="11164" Modified="2021-06-01 11:50:50" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Role" Type="136" Size="760" Modified="2021-06-02 13:37:26" Version="1.00" ProjectDependent="1" />
+			<Module Name="::User" Type="136" Size="648" Modified="2021-06-02 13:37:27" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Visu" Type="18" Size="1904" Modified="2021-06-02 13:40:48" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Visu01" Type="18" Size="15144" Modified="2021-06-02 13:40:46" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Visu02" Type="18" Size="880" Modified="2021-06-02 13:37:55" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Visu03" Type="18" Size="8664" Modified="2021-06-02 13:37:55" Version="1.00" ProjectDependent="1" />
+			<Module Name="::arial" Type="18" Size="1045436" Modified="2021-06-02 13:37:56" Version="1.00" ProjectDependent="1" />
+			<Module Name="::ashwac" Type="136" Size="212" Modified="2021-06-02 13:37:26" Version="1.00" ProjectDependent="1" />
+			<Module Name="::iomap" Type="50" Size="11164" Modified="2021-06-02 13:37:29" Version="1.00" ProjectDependent="1" />
 			<Module Name="::runtime" Type="18" Size="29340" Modified="2020-12-04 22:35:11" Version="4.83" ProjectDependent="1" />
 			<Module Name="::udbdef" Type="210" Size="70264" Modified="2014-04-10 10:00:00" Version="0.01" ProjectDependent="1" />
 			<Module Name="::vcalarm" Type="18" Size="93904" Modified="2020-04-28 21:16:00" Version="4.722" ProjectDependent="1" />
 			<Module Name="::vcbclass" Type="18" Size="181352" Modified="2020-04-28 21:17:22" Version="4.722" ProjectDependent="1" />
 			<Module Name="::vccbmp" Type="18" Size="6756" Modified="2020-04-28 21:16:29" Version="4.722" ProjectDependent="1" />
+			<Module Name="::vccbtn" Type="18" Size="17016" Modified="2020-04-28 21:16:20" Version="4.722" ProjectDependent="1" />
+			<Module Name="::vccnum" Type="18" Size="32992" Modified="2020-04-28 21:16:28" Version="4.722" ProjectDependent="1" />
 			<Module Name="::vccshape" Type="18" Size="4988" Modified="2020-04-28 21:16:31" Version="4.722" ProjectDependent="1" />
+			<Module Name="::vcctext" Type="18" Size="7516" Modified="2020-04-28 21:16:30" Version="4.722" ProjectDependent="1" />
 			<Module Name="::vcdsint" Type="18" Size="7264" Modified="2020-04-28 21:16:12" Version="4.722" ProjectDependent="1" />
 			<Module Name="::vcdsloc" Type="18" Size="37748" Modified="2020-04-28 21:16:15" Version="4.722" ProjectDependent="1" />
 			<Module Name="::vcfile" Type="18" Size="6544" Modified="2020-04-28 21:15:27" Version="4.722" ProjectDependent="1" />
@@ -69,7 +72,7 @@
 			<Module Name="::vcpkat" Type="18" Size="3952" Modified="2020-04-28 21:16:05" Version="4.722" ProjectDependent="1" />
 			<Module Name="::vcresman" Type="18" Size="1566384" Modified="2020-04-28 21:15:24" Version="4.722" ProjectDependent="1" />
 			<Module Name="::vcrt" Type="18" Size="75392" Modified="2020-04-28 21:17:30" Version="4.722" ProjectDependent="1" />
-			<Module Name="::vcshared" Type="18" Size="14744" Modified="2021-06-01 11:51:16" Version="1.00" ProjectDependent="1" />
+			<Module Name="::vcshared" Type="18" Size="14744" Modified="2021-06-02 13:37:56" Version="1.00" ProjectDependent="1" />
 			<Module Name="::vctcal" Type="18" Size="5388" Modified="2020-04-28 21:16:34" Version="4.722" ProjectDependent="1" />
 		</Memory>
 	</Application>

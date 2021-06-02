@@ -93,20 +93,20 @@
   <Symbol Name="\UnitGroups\POBJ" Index="0" Type="UNIT" RefString="Source[global].UnitGroup[Memory].Unit[$default]" />
   <Symbol Name="\UnitGroups\POBJ" Index="0" Type="UNIT" RefString="Source[global].UnitGroup[Pressure].Unit[$default]" />
   <Symbol Name="\UnitGroups\POBJ" Index="0" Type="UNIT" RefString="Source[global].UnitGroup[Temperatures].Unit[$default]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225472" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225473" Type="TG" RefString="Source[global].TextGroup[Mass_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225474" Type="TG" RefString="Source[global].TextGroup[Volume_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225475" Type="TG" RefString="Source[global].TextGroup[Power_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225476" Type="TG" RefString="Source[global].TextGroup[Memory_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225477" Type="TG" RefString="Source[global].TextGroup[Pressure_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225478" Type="TG" RefString="Source[global].TextGroup[Temperatures_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225479" Type="TG" RefString="Source[global].TextGroup[AG.SystemAlarms.AS1].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483800" Type="TG" RefString="Source[global].TextGroup[AlarmAcknowledgeState].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483801" Type="TG" RefString="Source[global].TextGroup[AlarmBypassState].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483799" Type="TG" RefString="Source[global].TextGroup[AlarmEvent].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483798" Type="TG" RefString="Source[global].TextGroup[AlarmState].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483648" Type="TG" RefString="Source[global].TextGroup[DateTimeFormats].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483649" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[en]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225472" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225473" Type="TG" RefString="Source[global].TextGroup[Mass_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225474" Type="TG" RefString="Source[global].TextGroup[Volume_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225475" Type="TG" RefString="Source[global].TextGroup[Power_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225476" Type="TG" RefString="Source[global].TextGroup[Memory_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225477" Type="TG" RefString="Source[global].TextGroup[Pressure_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225478" Type="TG" RefString="Source[global].TextGroup[Temperatures_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225479" Type="TG" RefString="Source[global].TextGroup[AG.SystemAlarms.AS1].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483800" Type="TG" RefString="Source[global].TextGroup[AlarmAcknowledgeState].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483801" Type="TG" RefString="Source[global].TextGroup[AlarmBypassState].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483799" Type="TG" RefString="Source[global].TextGroup[AlarmEvent].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483798" Type="TG" RefString="Source[global].TextGroup[AlarmState].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483648" Type="TG" RefString="Source[global].TextGroup[DateTimeFormats].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483649" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[pl]" />
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="3221225472" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[de]" />
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="3221225473" Type="TG" RefString="Source[global].TextGroup[Mass_embedded].Language[de]" />
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="3221225474" Type="TG" RefString="Source[global].TextGroup[Volume_embedded].Language[de]" />
@@ -122,24 +122,58 @@
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="2147483648" Type="TG" RefString="Source[global].TextGroup[DateTimeFormats].Language[de]" />
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="2147483649" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[de]" />
   <Symbol Name="\Projects\Visu" Index="0" Type="REF" RefString="Source[local].BitmapGroup[BitmapGroup_1]" />
-  <Symbol Name="\Projects\Visu\Language\en\BitmapGroups\POBJ" Index="0" Type="BMPG" RefString="Source[local].BitmapGroup[BitmapGroup_1_en]" />
+  <Symbol Name="\Projects\Visu\Language\pl\BitmapGroups\POBJ" Index="0" Type="BMPG" RefString="Source[local].BitmapGroup[BitmapGroup_1_pl]" />
   <Symbol Name="\Projects\Visu\Language\de\BitmapGroups\POBJ" Index="0" Type="BMPG" RefString="Source[local].BitmapGroup[BitmapGroup_1_de]" />
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="0" Type="GFX" RefString="Source[local].Bitmap[Bitmap_1]" />
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="1" Type="GFX" RefString="Source[local].Bitmap[Bitmap_2]" />
-  <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="0" Type="LOC" RefString="Source[local].Localizer[en]" />
-  <Symbol Name="\Projects\Visu\LogFonts" Index="0" Type="FNT" RefString="Source[local].Font[DefaultFont]" />
+  <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="2" Type="GFX" RefString="Source[local].Bitmap[Bitmap_3]" />
   <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="1" Type="LOC" RefString="Source[local].Localizer[de]" />
+  <Symbol Name="\Projects\Visu\LogFonts" Index="0" Type="FNT" RefString="Source[local].Font[DefaultFont]" />
+  <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="0" Type="LOC" RefString="Source[local].Localizer[pl]" />
   <Symbol Name="\Projects\Visu\Forms\POBJ" Index="0" Type="PAGE" RefString="Source[local].Page[Page_1]" />
+  <Symbol Name="\Projects\Visu\TextGroupBase\TextGroup_1" Index="0" Type="TG" RefString="Source[local].TextGroup[TextGroup_1]" />
   <Symbol Name="Source[local].KeySource[VNCServer]" Index="1073741824" Type="KS" RefString="Source[local].KeySource[VNCServer]" />
   <Symbol Name="Source[local].Driver[DisplaySW]" Index="1073741824" Type="DRV" RefString="Source[local].Driver[DisplaySW]" />
   <Symbol Name="Source[local].KS[default]" Index="1073741825" Type="KS" RefString="Source[local].KS[default]" />
   <Symbol Name="Source[local].Driver[ATKeyboard]" Index="1073741825" Type="DRV" RefString="Source[local].Driver[ATKeyboard]" />
   <Symbol Name="Source[local].KSTable[X20CP1382]" Index="1073741824" Type="KSTable" RefString="Source[local].KSTable[X20CP1382]" />
   <Symbol Name="Source[local].KSTable[PS2-Keyboard]" Index="1073741825" Type="KSTable" RefString="Source[local].KSTable[PS2-Keyboard]" />
-  <Symbol Name="Source[local].Page[Page_1].Layer[Default].Control[Shape_1]" Index="1073741824" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Default].Control[Shape_1]" />
-  <Symbol Name="Source[local].Page[Page_1].Layer[Default].Control[Bitmap_1]" Index="1073741825" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Default].Control[Bitmap_1]" />
-  <Symbol Name="Source[local].Page[Page_1].Layer[Default]" Index="1073741824" Type="LAY" RefString="Source[local].Page[Page_1].Layer[Default]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Shape_1]" Index="1073741824" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Shape_1]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Numeric_1]" Index="1073741825" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Numeric_1]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Numeric_2]" Index="1073741826" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Numeric_2]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Text_1]" Index="1073741827" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Text_1]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Text_2]" Index="1073741828" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Text_2]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Numeric_3]" Index="1073741829" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Numeric_3]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Numeric_4]" Index="1073741830" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Numeric_4]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Text_3]" Index="1073741831" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Text_3]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].Control[Text_4]" Index="1073741832" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[back].Control[Text_4]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back]" Index="1073741824" Type="LAY" RefString="Source[local].Page[Page_1].Layer[back]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[Shape_1]" Index="1073741833" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[Shape_1]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[Bitmap_1]" Index="1073741834" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[Bitmap_1]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[Bitmap_2]" Index="1073741835" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[Bitmap_2]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[Bitmap_3]" Index="1073741836" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[Bitmap_3]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[btn_1zl]" Index="1073741837" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[btn_1zl]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[btn_2zl]" Index="1073741838" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[btn_2zl]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[btn_5zl]" Index="1073741839" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[btn_5zl]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[btn_p1mycie]" Index="1073741840" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[btn_p1mycie]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[btn_p2splukanie]" Index="1073741841" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[btn_p2splukanie]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[btn_p3wosk]" Index="1073741842" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[btn_p3wosk]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[btn_p4blysk]" Index="1073741843" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[btn_p4blysk]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[Text_1]" Index="1073741844" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[Text_1]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[Text_2]" Index="1073741845" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[Text_2]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[Text_3]" Index="1073741846" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[Text_3]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front].Control[Text_4]" Index="1073741847" Type="CTRL" RefString="Source[local].Page[Page_1].Layer[Front].Control[Text_4]" />
+  <Symbol Name="Source[local].VirtualKey[%embVirtualKey_4]" Index="1073741824" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_4]" />
+  <Symbol Name="Source[local].VirtualKey[%embVirtualKey_5]" Index="1073741825" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_5]" />
+  <Symbol Name="Source[local].VirtualKey[%embVirtualKey_6]" Index="1073741826" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_6]" />
+  <Symbol Name="Source[local].VirtualKey[%embVirtualKey_7]" Index="1073741827" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_7]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[Front]" Index="1073741825" Type="LAY" RefString="Source[local].Page[Page_1].Layer[Front]" />
+  <Symbol Name="Source[local].Page[Page_1].Layer[back].TextGroup[Embedded]" Index="1073741825" Type="TG" RefString="Source[local].Page[Page_1].Layer[back].TextGroup[Embedded]" />
   <Symbol Name="Source[local].StyleSheet[Color]" Index="1073741824" Type="SS" RefString="Source[local].StyleSheet[Color]" />
+  <Symbol Name="Source[local].VirtualKey[%embVirtualKey_1]" Index="1073741828" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_1]" />
+  <Symbol Name="Source[local].VirtualKey[a]" Index="1073741829" Type="VKEY" RefString="Source[local].VirtualKey[a]" />
+  <Symbol Name="Source[local].VirtualKey[%embVirtualKey_2]" Index="1073741830" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_2]" />
+  <Symbol Name="Source[local].VirtualKey[%embVirtualKey_3]" Index="1073741831" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_3]" />
   <Symbol Name="Source[local].Runtime[Visu]" Index="1073741824" Type="RTM" RefString="Source[local].Runtime[Visu]" />
   <Symbol Name="Source[local].TrendDataConfiguration[TrendData]" Index="1073741824" Type="TDC" RefString="Source[local].TrendDataConfiguration[TrendData]" />
   <Symbol Name="Source[local].StyleGroup[0x00000400].StyleClass[Empty]" Index="1073741825" Type="REF" RefString="Source[local].StyleGroup[0x00000400].StyleClass[Empty]" />
@@ -175,6 +209,10 @@
   <Symbol Name="Source[local].StyleGroup[0x0000101C].StyleClass[Empty]" Index="1073741855" Type="REF" RefString="Source[local].StyleGroup[0x0000101C].StyleClass[Empty]" />
   <Symbol Name="Source[local].StyleGroup[0x0000101F].StyleClass[Empty]" Index="1073741856" Type="REF" RefString="Source[local].StyleGroup[0x0000101F].StyleClass[Empty]" />
   <Symbol Name="Source[local].StyleGroup[0x00001020].StyleClass[Empty]" Index="1073741857" Type="REF" RefString="Source[local].StyleGroup[0x00001020].StyleClass[Empty]" />
+  <Symbol Name="\Projects\Visu\Language\pl\TextGroups\POBJ" Index="1073741825" Type="TG" RefString="Source[local].Page[Page_1].Layer[back].TextGroup[Embedded].Language[pl]" />
+  <Symbol Name="\Projects\Visu\Language\pl\TextGroups\POBJ" Index="0" Type="TG" RefString="Source[local].TextGroup[TextGroup_1].Language[pl]" />
+  <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="1073741825" Type="TG" RefString="Source[local].Page[Page_1].Layer[back].TextGroup[Embedded].Language[de]" />
+  <Symbol Name="\Projects\Visu\Language\de\TextGroups\POBJ" Index="0" Type="TG" RefString="Source[local].TextGroup[TextGroup_1].Language[de]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x00000400" Index="1073741825" Type="SC" RefString="Source[local].StyleGroup[0x00000400].StyleClass[Color.Empty]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x00001001" Index="1073741826" Type="SC" RefString="Source[local].StyleGroup[0x00001001].StyleClass[Color.Empty]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x00001002" Index="1073741827" Type="SC" RefString="Source[local].StyleGroup[0x00001002].StyleClass[Color.Empty]" />
@@ -208,4 +246,8 @@
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x0000101C" Index="1073741855" Type="SC" RefString="Source[local].StyleGroup[0x0000101C].StyleClass[Color.Empty]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x0000101F" Index="1073741856" Type="SC" RefString="Source[local].StyleGroup[0x0000101F].StyleClass[Color.Empty]" />
   <Symbol Name="\Projects\Visu\StyleSheets\Color\0x00001020" Index="1073741857" Type="SC" RefString="Source[local].StyleGroup[0x00001020].StyleClass[Color.Empty]" />
+  <Symbol Name="\Projects\Visu\VKeys\Common" Index="1073741824" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_4]#\Projects\Visu\VKeys\Common" />
+  <Symbol Name="\Projects\Visu\VKeys\Common" Index="1073741825" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_5]#\Projects\Visu\VKeys\Common" />
+  <Symbol Name="\Projects\Visu\VKeys\Common" Index="1073741826" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_6]#\Projects\Visu\VKeys\Common" />
+  <Symbol Name="\Projects\Visu\VKeys\Common" Index="1073741827" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_7]#\Projects\Visu\VKeys\Common" />
 </SymbolTable>

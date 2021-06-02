@@ -20,10 +20,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="en" TargetIndex="0">
+    <Folder Name="pl" TargetIndex="0">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[httpURL_SDM]" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[en]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[httpURL_SDM]" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[pl]">
             <UInt32 Name="NumberOfTexts">1</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>

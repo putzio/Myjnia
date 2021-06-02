@@ -3,7 +3,10 @@
 <VCFirmware>
   <File Name="vcresman.br" />
   <File Name="vccshape.br" />
+  <File Name="vccnum.br" />
+  <File Name="vcctext.br" />
   <File Name="vccbmp.br" />
+  <File Name="vccbtn.br" />
   <File Name="vcrt.br" />
   <File Name="vcbclass.br" />
   <File Name="vcgclass.br" />

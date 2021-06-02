@@ -93,20 +93,20 @@
   <Symbol Name="\UnitGroups\POBJ" Index="0" Type="UNIT" RefString="Source[global].UnitGroup[Memory].Unit[$default]" />
   <Symbol Name="\UnitGroups\POBJ" Index="0" Type="UNIT" RefString="Source[global].UnitGroup[Pressure].Unit[$default]" />
   <Symbol Name="\UnitGroups\POBJ" Index="0" Type="UNIT" RefString="Source[global].UnitGroup[Temperatures].Unit[$default]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225472" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225473" Type="TG" RefString="Source[global].TextGroup[Mass_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225474" Type="TG" RefString="Source[global].TextGroup[Volume_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225475" Type="TG" RefString="Source[global].TextGroup[Power_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225476" Type="TG" RefString="Source[global].TextGroup[Memory_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225477" Type="TG" RefString="Source[global].TextGroup[Pressure_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225478" Type="TG" RefString="Source[global].TextGroup[Temperatures_embedded].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="3221225479" Type="TG" RefString="Source[global].TextGroup[AG.SystemAlarms.AS1].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483800" Type="TG" RefString="Source[global].TextGroup[AlarmAcknowledgeState].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483801" Type="TG" RefString="Source[global].TextGroup[AlarmBypassState].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483799" Type="TG" RefString="Source[global].TextGroup[AlarmEvent].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483798" Type="TG" RefString="Source[global].TextGroup[AlarmState].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483648" Type="TG" RefString="Source[global].TextGroup[DateTimeFormats].Language[en]" />
-  <Symbol Name="\Language\en\TextGroups\POBJ" Index="2147483649" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[en]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225472" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225473" Type="TG" RefString="Source[global].TextGroup[Mass_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225474" Type="TG" RefString="Source[global].TextGroup[Volume_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225475" Type="TG" RefString="Source[global].TextGroup[Power_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225476" Type="TG" RefString="Source[global].TextGroup[Memory_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225477" Type="TG" RefString="Source[global].TextGroup[Pressure_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225478" Type="TG" RefString="Source[global].TextGroup[Temperatures_embedded].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="3221225479" Type="TG" RefString="Source[global].TextGroup[AG.SystemAlarms.AS1].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483800" Type="TG" RefString="Source[global].TextGroup[AlarmAcknowledgeState].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483801" Type="TG" RefString="Source[global].TextGroup[AlarmBypassState].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483799" Type="TG" RefString="Source[global].TextGroup[AlarmEvent].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483798" Type="TG" RefString="Source[global].TextGroup[AlarmState].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483648" Type="TG" RefString="Source[global].TextGroup[DateTimeFormats].Language[pl]" />
+  <Symbol Name="\Language\pl\TextGroups\POBJ" Index="2147483649" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[pl]" />
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="3221225472" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[de]" />
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="3221225473" Type="TG" RefString="Source[global].TextGroup[Mass_embedded].Language[de]" />
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="3221225474" Type="TG" RefString="Source[global].TextGroup[Volume_embedded].Language[de]" />
@@ -122,11 +122,12 @@
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="2147483648" Type="TG" RefString="Source[global].TextGroup[DateTimeFormats].Language[de]" />
   <Symbol Name="\Language\de\TextGroups\POBJ" Index="2147483649" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[de]" />
   <Symbol Name="\Projects\Visu" Index="0" Type="REF" RefString="Source[local].BitmapGroup[BitmapGroup_1]" />
-  <Symbol Name="\Projects\Visu\Language\en\BitmapGroups\POBJ" Index="0" Type="BMPG" RefString="Source[local].BitmapGroup[BitmapGroup_1_en]" />
+  <Symbol Name="\Projects\Visu\Language\pl\BitmapGroups\POBJ" Index="0" Type="BMPG" RefString="Source[local].BitmapGroup[BitmapGroup_1_pl]" />
   <Symbol Name="\Projects\Visu\Language\de\BitmapGroups\POBJ" Index="0" Type="BMPG" RefString="Source[local].BitmapGroup[BitmapGroup_1_de]" />
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="0" Type="GFX" RefString="Source[local].Bitmap[Bitmap_1]" />
   <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="1" Type="GFX" RefString="Source[local].Bitmap[Bitmap_2]" />
-  <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="0" Type="LOC" RefString="Source[local].Localizer[en]" />
-  <Symbol Name="\Projects\Visu\LogFonts" Index="0" Type="FNT" RefString="Source[local].Font[DefaultFont]" />
+  <Symbol Name="\Projects\Visu\Bitmaps\POBJ" Index="2" Type="GFX" RefString="Source[local].Bitmap[Bitmap_3]" />
   <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="1" Type="LOC" RefString="Source[local].Localizer[de]" />
+  <Symbol Name="\Projects\Visu\LogFonts" Index="0" Type="FNT" RefString="Source[local].Font[DefaultFont]" />
+  <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="0" Type="LOC" RefString="Source[local].Localizer[pl]" />
 </SymbolTable>
