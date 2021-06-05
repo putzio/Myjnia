@@ -44,7 +44,8 @@
     <Source File="Fonts\DefaultFont.fninfo"/>
     <Source File="Bitmaps\Bitmap_1.bminfo"/>
     <Source File="Bitmaps\Bitmap_2.bminfo"/>
-    <Source File="Bitmaps\Bitmap_3.bminfo"/>
+    <Source File="Bitmaps\Bitmap_5.bminfo"/>
+    <Source File="Bitmaps\Bitmap_STOP.bminfo"/>
     <Source File="BitmapGroups\BitmapGroup_1.bmgrp"/>
     <Source File="Pages\Page_1.page"/>
     <Source File="StyleSheets\Color.vcs"/>

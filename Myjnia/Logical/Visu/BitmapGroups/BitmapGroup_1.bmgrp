@@ -7,7 +7,7 @@
   <BitmapLayer LanguageId="neutral">
     <BitmapRef ID="1" Value="Source[local].Bitmap[Bitmap_1]"/>
     <BitmapRef ID="2" Value="Source[local].Bitmap[Bitmap_2]"/>
-    <BitmapRef ID="3" Value="Source[local].Bitmap[Bitmap_3]"/>
+    <BitmapRef ID="3" Value="Source[local].Bitmap[Bitmap_5]"/>
   </BitmapLayer>
   <IndexMap>
     <Index ID="1" Value="1"/>
