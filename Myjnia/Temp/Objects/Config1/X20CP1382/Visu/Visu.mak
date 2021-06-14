@@ -57,7 +57,7 @@ LIB_LOCAL_OBJ_Visu=$(TEMP_PATH_Visu)/localobj.vca
 # Hardware sources
 PANEL_HW_OBJECT_Visu=$(TEMP_PATH_ROOT_Visu)/Objects/$(AS_CONFIGURATION)/$(AS_TEMP_PLC)/Visu/dis.Hardware.vco
 PANEL_HW_VCI_Visu=$(TEMP_PATH_ROOT_Visu)/Objects/$(AS_CONFIGURATION)/$(AS_TEMP_PLC)/Visu/dis.Hardware.vci
-PANEL_HW_SOURCE_Visu=D:/Studia/VI/Myjnia/Myjnia/Physical/Config1/Hardware.hw 
+PANEL_HW_SOURCE_Visu=D:/Studia/VI/Myjnia/Myjnia/Myjnia/Physical/Config1/Hardware.hw 
 DIS_OBJECTS_Visu=$(PANEL_HW_OBJECT_Visu) $(KEYMAP_OBJECTS_Visu)
 
 # KeyMapping flags
@@ -75,7 +75,8 @@ FNINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Fonts/DefaultFont.fninfo
 
 BMINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_2.bminfo \
-	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.bminfo 
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_5.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_STOP.bminfo 
 
 BMGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/BitmapGroup_1.bmgrp 
 
@@ -174,7 +175,11 @@ $(TEMP_PATH_Visu)/bminfo.Bitmap_2.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/B
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
-$(TEMP_PATH_Visu)/bminfo.Bitmap_3.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.jpg
+$(TEMP_PATH_Visu)/bminfo.Bitmap_5.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_5.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_5.jpg
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Bitmap_STOP.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_STOP.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_STOP.png
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 

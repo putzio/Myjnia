@@ -10,7 +10,7 @@
         <UInt16 Name="ResolutionY">480</UInt16>
         <UInt16 Name="Port">5900</UInt16>
         <UInt16 Name="RefreshRate">300</UInt16>
-        <UInt16 Name="MaxClients">1</UInt16>
+        <UInt16 Name="MaxClients">10</UInt16>
         <Byte Name="AuthenticationDisable">0</Byte>
         <Byte Name="Reserved">0</Byte>
         <Binary Name="Password" Encoding="Base64">OBigQsdz/oU=</Binary>

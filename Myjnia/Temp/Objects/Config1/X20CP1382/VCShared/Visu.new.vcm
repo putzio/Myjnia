@@ -18,7 +18,7 @@
     <Property Name="Platform" Value="Platform.x86.Generic" />
   </Module>
   <Module>
-    <Property Name="Name" Value="vccnum.br" />
+    <Property Name="Name" Value="vccbtn.br" />
     <Property Name="Version" Value="01.00" />
     <Property Name="Platform" Value="Platform.x86.Generic" />
   </Module>
@@ -28,12 +28,12 @@
     <Property Name="Platform" Value="Platform.x86.Generic" />
   </Module>
   <Module>
-    <Property Name="Name" Value="vccbmp.br" />
+    <Property Name="Name" Value="vccnum.br" />
     <Property Name="Version" Value="01.00" />
     <Property Name="Platform" Value="Platform.x86.Generic" />
   </Module>
   <Module>
-    <Property Name="Name" Value="vccbtn.br" />
+    <Property Name="Name" Value="vccbar.br" />
     <Property Name="Version" Value="01.00" />
     <Property Name="Platform" Value="Platform.x86.Generic" />
   </Module>

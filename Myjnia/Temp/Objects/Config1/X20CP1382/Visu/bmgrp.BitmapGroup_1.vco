@@ -18,8 +18,8 @@
               <UInt16 Name="Reserved">0</UInt16>
               <UInt16 Name="Value">2</UInt16>
             </Group>
-            <Group Name="Bitmap_3">
-              <Reference Name="Bitmap" Type="GFX">Source[local].Bitmap[Bitmap_3]</Reference>
+            <Group Name="Bitmap_5">
+              <Reference Name="Bitmap" Type="GFX">Source[local].Bitmap[Bitmap_5]</Reference>
               <UInt16 Name="Reserved">0</UInt16>
               <UInt16 Name="Value">3</UInt16>
             </Group>
@@ -42,8 +42,8 @@
               <UInt16 Name="Reserved">0</UInt16>
               <UInt16 Name="Value">2</UInt16>
             </Group>
-            <Group Name="Bitmap_3">
-              <Reference Name="Bitmap" Type="GFX">Source[local].Bitmap[Bitmap_3]</Reference>
+            <Group Name="Bitmap_5">
+              <Reference Name="Bitmap" Type="GFX">Source[local].Bitmap[Bitmap_5]</Reference>
               <UInt16 Name="Reserved">0</UInt16>
               <UInt16 Name="Value">3</UInt16>
             </Group>

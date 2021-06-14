@@ -1,13 +1,8 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
 
-<<<<<<< HEAD
-#ifndef _LIBRARIES_20210602134037_
-#define _LIBRARIES_20210602134037_
-=======
-#ifndef _LIBRARIES_20210601231941_
-#define _LIBRARIES_20210601231941_
->>>>>>> Visu
+#ifndef _LIBRARIES_20210614140411_
+#define _LIBRARIES_20210614140411_
 
 __asm__(".section \".plc\"");
 
@@ -466,9 +461,5 @@ __asm__(".ascii \"iecfile \\\"Logical/Libraries/AsIecCon/AsIecCon.var\\\" scope 
 __asm__(".previous");
 
 
-<<<<<<< HEAD
-#endif /* _LIBRARIES_20210602134037_ */
-=======
-#endif /* _LIBRARIES_20210601231941_ */
->>>>>>> Visu
+#endif /* _LIBRARIES_20210614140411_ */
 
