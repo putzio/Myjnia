@@ -2,9 +2,63 @@
 <?AutomationStudio Version="4.9.3.144 SP"?>
 <EnvironmentSettings xmlns="http://br-automation.co.at/AS/VC/Project">
   <Visual_Components_Frames>
-    <Property Name="ActiveFrame" Value="1"/>
+    <Property Name="ActiveFrame" Value="0"/>
     <Property Name="SaveFrameLimit" Value="4"/>
     <Property Name="ShowCmd" Value="3"/>
+    <Frame>
+      <Property Name="ActiveView" Value="0"/>
+      <Property Name="FrameMinPtX" Value="-1"/>
+      <Property Name="FrameMinPtY" Value="-1"/>
+      <Property Name="ParentObjectName" Value="TextGroup_1"/>
+      <Property Name="ParentObjectType" Value="TextGroup"/>
+      <Property Name="ShowCmd" Value="3"/>
+      <Property Name="WndPosBottom" Value="583"/>
+      <Property Name="WndPosLeft" Value="114"/>
+      <Property Name="WndPosRight" Value="744"/>
+      <Property Name="WndPosTop" Value="114"/>
+      <Views>
+        <View>
+          <Property Name="ID" Value="512"/>
+        </View>
+        <View>
+          <Property Name="ID" Value="134217728"/>
+        </View>
+      </Views>
+    </Frame>
+    <Frame>
+      <Property Name="ActiveView" Value="0"/>
+      <Property Name="FrameMinPtX" Value="-1"/>
+      <Property Name="FrameMinPtY" Value="-1"/>
+      <Property Name="ParentObjectName" Value="G_LED"/>
+      <Property Name="ParentObjectType" Value="ColorMap"/>
+      <Property Name="ShowCmd" Value="3"/>
+      <Property Name="WndPosBottom" Value="545"/>
+      <Property Name="WndPosLeft" Value="76"/>
+      <Property Name="WndPosRight" Value="706"/>
+      <Property Name="WndPosTop" Value="76"/>
+      <Views>
+        <View>
+          <Property Name="ID" Value="0"/>
+        </View>
+      </Views>
+    </Frame>
+    <Frame>
+      <Property Name="ActiveView" Value="0"/>
+      <Property Name="FrameMinPtX" Value="-1"/>
+      <Property Name="FrameMinPtY" Value="-1"/>
+      <Property Name="ParentObjectName" Value="Color Maps"/>
+      <Property Name="ParentObjectType" Value="ColorMapMngr"/>
+      <Property Name="ShowCmd" Value="3"/>
+      <Property Name="WndPosBottom" Value="507"/>
+      <Property Name="WndPosLeft" Value="38"/>
+      <Property Name="WndPosRight" Value="668"/>
+      <Property Name="WndPosTop" Value="38"/>
+      <Views>
+        <View>
+          <Property Name="ID" Value="0"/>
+        </View>
+      </Views>
+    </Frame>
     <Frame>
       <Property Name="ActiveView" Value="0"/>
       <Property Name="FrameMinPtX" Value="-1"/>
@@ -14,7 +68,7 @@
       <Property Name="ShowCmd" Value="3"/>
       <Property Name="WndPosBottom" Value="507"/>
       <Property Name="WndPosLeft" Value="38"/>
-      <Property Name="WndPosRight" Value="558"/>
+      <Property Name="WndPosRight" Value="828"/>
       <Property Name="WndPosTop" Value="38"/>
       <Views>
         <View>
@@ -32,30 +86,6 @@
         </View>
         <View>
           <Property Name="ID" Value="262144"/>
-        </View>
-      </Views>
-    </Frame>
-    <Frame>
-      <Property Name="ActiveView" Value="0"/>
-      <Property Name="FrameMinPtX" Value="-1"/>
-      <Property Name="FrameMinPtY" Value="-1"/>
-      <Property Name="ParentObjectName" Value="Pages"/>
-      <Property Name="ParentObjectType" Value="PageMngr"/>
-      <Property Name="ShowCmd" Value="3"/>
-      <Property Name="WndPosBottom" Value="465"/>
-      <Property Name="WndPosLeft" Value="0"/>
-      <Property Name="WndPosRight" Value="516"/>
-      <Property Name="WndPosTop" Value="0"/>
-      <Views>
-        <View>
-          <Property Name="ID" Value="0"/>
-        </View>
-        <View>
-          <Property Name="ID" Value="524288"/>
-          <Property Name="Scalecx" Value="10"/>
-          <Property Name="Scalecy" Value="10"/>
-          <Property Name="ScrollPositionX" Value="0"/>
-          <Property Name="ScrollPositionY" Value="0"/>
         </View>
       </Views>
     </Frame>

@@ -1,7 +1,7 @@
 SHELL := cmd.exe
 CYGWIN=nontsec
 export PATH := C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\CMake\bin;C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\bin;C:\Program Files\Microchip\xc8\v2.31\bin;C:\Program Files\dotnet\;C:\Users\krzys\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\krzys\AppData\Local\Programs\Python\Python39\;C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\bin;C:\Users\krzys\AppData\Local\Microsoft\WindowsApps;C:\Users\krzys\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Common Files\Hilscher GmbH\TLRDecode;C:\Users\krzys\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\krzys\AppData\Local\Programs\Python\Python39\;C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2020-q4-major\bin;C:\Users\krzys\AppData\Local\Microsoft\WindowsApps;C:\Users\krzys\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Common Files\Hilscher GmbH\TLRDecode;C:\BrAutomation\AS49\Bin-en\4.9;C:\BrAutomation\AS49\Bin-en\4.8;C:\BrAutomation\AS49\Bin-en\4.7;C:\BrAutomation\AS49\Bin-en\4.6;C:\BrAutomation\AS49\Bin-en\4.5;C:\BrAutomation\AS49\Bin-en\4.4;C:\BrAutomation\AS49\Bin-en\4.3;C:\BrAutomation\AS49\Bin-en\4.2;C:\BrAutomation\AS49\Bin-en\4.1;C:\BrAutomation\AS49\Bin-en\4.0;C:\BrAutomation\AS49\Bin-en
-export AS_BUILD_MODE := BuildAndCreateCompactFlash
+export AS_BUILD_MODE := BuildAndTransfer
 export AS_VERSION := 4.9.3.144 SP
 export AS_WORKINGVERSION := 4.9
 export AS_COMPANY_NAME :=  
@@ -35,5 +35,5 @@ export WIN32_AS_INSTALL_PATH := "C:\BrAutomation\AS49"
 
 ProjectMakeFile:
 
-	@'C:/BrAutomation/AS49/bin-en/4.9/BR.AS.AnalyseProject.exe' '$(AS_PROJECT_PATH)/Myjnia.apj' -t '$(AS_TEMP_PATH)' -c '$(AS_CONFIGURATION)' -o '$(AS_BINARIES_PATH)'   -sfas -buildMode 'BuildAndCreateCompactFlash'   
+	@'$(AS_BIN_PATH)/4.9/BR.AS.AnalyseProject.exe' '$(AS_PROJECT_PATH)/Myjnia.apj' -t '$(AS_TEMP_PATH)' -c '$(AS_CONFIGURATION)' -o '$(AS_BINARIES_PATH)'   -sfas -buildMode 'BuildAndTransfer'   
 

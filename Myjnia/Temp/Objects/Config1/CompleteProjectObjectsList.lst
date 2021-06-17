@@ -22,7 +22,7 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Libraries\Package.pkg"
     LogicalPath="Libraries"
     Type="Package"
-    LastWriteTime="132680990040000000" />
+    LastWriteTime="132683936900000000" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Libraries\operator\binary.lby"
     LogicalPath="Libraries.operator"
@@ -116,6 +116,29 @@
     LastWriteTime="132681451480000000"
     Private="false" />
   <Object
+    Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Libraries\standard\binary.lby"
+    LogicalPath="Libraries.standard"
+    Type="Library"
+    LastWriteTime="132683936900000000" />
+  <Object
+    Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Libraries\standard\standard.fun"
+    LogicalPath="Libraries.standard.standard.fun"
+    Type="File"
+    LastWriteTime="132683936900000000"
+    Private="false" />
+  <Object
+    Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Libraries\standard\standard.typ"
+    LogicalPath="Libraries.standard.standard.typ"
+    Type="File"
+    LastWriteTime="132683936900000000"
+    Private="false" />
+  <Object
+    Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Libraries\standard\standard.var"
+    LogicalPath="Libraries.standard.standard.var"
+    Type="File"
+    LastWriteTime="132683936900000000"
+    Private="false" />
+  <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Visu\Vc.dob"
     LogicalPath="Visu"
     Type="DataObject"
@@ -140,7 +163,7 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Program\Main.st"
     LogicalPath="Program.Main.st"
     Type="File"
-    LastWriteTime="132680990060000000"
+    LastWriteTime="132682237520000000"
     Private="false" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Program\Types.typ"
@@ -152,7 +175,7 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Logical\Program\Variables.var"
     LogicalPath="Program.Variables.var"
     Type="File"
-    LastWriteTime="132680990060000000"
+    LastWriteTime="132682247540000000"
     Private="true" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Physical\Config1\Config.pkg"
@@ -169,18 +192,18 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Physical\Config1\Hardware.hwl"
     LogicalPath="Config1.Hardware.hwl"
     Type="File"
-    LastWriteTime="132681452720000000"
+    LastWriteTime="132682182100000000"
     Private="false" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.pkg"
     LogicalPath="Config1.X20CP1382"
     Type="Cpu"
-    LastWriteTime="132681458440000000" />
+    LastWriteTime="132683947040000000" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.sw"
     LogicalPath="Config1.X20CP1382.Cpu.sw"
     Type="File"
-    LastWriteTime="132681458440000000"
+    LastWriteTime="132683936920000000"
     Private="false" />
   <Object
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Physical\Config1\X20CP1382\Cpu.per"
@@ -358,6 +381,6 @@
     Path="D:\Studia\VI\Myjnia\Myjnia\Myjnia\Physical\Config1\Hardware.jpg"
     LogicalPath="Config1.Hardware.jpg"
     Type="File"
-    LastWriteTime="132681452720000000"
+    LastWriteTime="132682182100000000"
     Private="false" />
 </Objects>

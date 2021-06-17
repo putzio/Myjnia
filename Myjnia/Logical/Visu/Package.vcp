@@ -50,6 +50,7 @@
     <Source File="Pages\Page_1.page"/>
     <Source File="StyleSheets\Color.vcs"/>
     <Source File="Trends\TrendData.tdc"/>
+    <Source File="ColorMaps\G_LED.clm"/>
     <Source File="VirtualKeys.vcvk"/>
     <Source File="Palette.vcr"/>
   </SourceFiles>

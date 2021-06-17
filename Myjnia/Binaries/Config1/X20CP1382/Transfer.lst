@@ -47,6 +47,7 @@
   <Operation Download="Visu03.br" Memory="UserROM"/>
   <Operation Download="arial.br" Memory="UserROM"/>
   <Operation Download="vcshared.br" Memory="UserROM"/>
+  <Operation Download="standard.br" Memory="UserROM"/>
   <Operation Download="udbdef.br" Memory="UserROM"/>
   <Operation Download="ashwac.br" Memory="UserROM"/>
   <Operation Download="Role.br" Memory="UserROM"/>
