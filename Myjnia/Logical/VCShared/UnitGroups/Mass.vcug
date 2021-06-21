@@ -12,7 +12,7 @@
     <Property Name="Description" Value=""/>
     <Property Name="Index" Value="65535"/>
     <TextSnippets/>
-    <TextLayer LanguageId="pl">
+    <TextLayer LanguageId="en">
       <Text ID="243" Value="gramm"/>
       <Text ID="244" Value=" g"/>
       <Text ID="245" Value="kilogramm"/>
@@ -33,6 +33,17 @@
       <Text ID="7589" Value=""/>
       <Text ID="7590" Value=""/>
       <Text ID="87016" Value="Kilogramm"/>
+    </TextLayer>
+    <TextLayer LanguageId="pl">
+      <Text ID="243" Value="gramm"/>
+      <Text ID="244" Value=" g"/>
+      <Text ID="245" Value="kilogramm"/>
+      <Text ID="246" Value=" kg"/>
+      <Text ID="247" Value="milligramm"/>
+      <Text ID="248" Value=" mg"/>
+      <Text ID="7589" Value=""/>
+      <Text ID="7590" Value=""/>
+      <Text ID="87016" Value="kilogramm"/>
     </TextLayer>
     <IndexMap>
       <Index ID="243" Value="1"/>

@@ -32,10 +32,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="pl" TargetIndex="0">
+    <Folder Name="en" TargetIndex="2">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[AlarmBypassState]" Type="TG" RefString="Source[global].TextGroup[AlarmBypassState].Language[pl]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[AlarmBypassState]" Type="TG" RefString="Source[global].TextGroup[AlarmBypassState].Language[en]">
             <UInt32 Name="NumberOfTexts">4</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -86,10 +86,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="de" TargetIndex="1">
+    <Folder Name="pl" TargetIndex="0">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[AlarmBypassState]" Type="TG" RefString="Source[global].TextGroup[AlarmBypassState].Language[de]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[AlarmBypassState]" Type="TG" RefString="Source[global].TextGroup[AlarmBypassState].Language[pl]">
             <UInt32 Name="NumberOfTexts">4</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -115,22 +115,22 @@
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">93656</UInt32>
-                <UInt32 Name="TextOffset">90</UInt32>
+                <UInt32 Name="TextOffset">96</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
               <TableRow>
                 <UInt32 Name="TextIndex">93657</UInt32>
-                <UInt32 Name="TextOffset">96</UInt32>
+                <UInt32 Name="TextOffset">102</UInt32>
                 <Byte Name="SnippetCount">0</Byte>
                 <Byte Name="Reserved">0</Byte>
                 <UInt16 Name="Reserved">0</UInt16>
               </TableRow>
             </Table>
             <Group Name="Texts">
-              <String Name="Text" Encoding="Unicode">"Gebrückt"</String>
-              <String Name="Text" Encoding="Unicode">"Entbrückt"</String>
+              <String Name="Text" Encoding="Unicode">"Bypassed"</String>
+              <String Name="Text" Encoding="Unicode">"Not Bypassed"</String>
               <String Name="Text" Encoding="Unicode">"nB"</String>
               <String Name="Text" Encoding="Unicode">"B"</String>
             </Group>

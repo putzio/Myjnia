@@ -20,10 +20,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="pl" TargetIndex="0">
+    <Folder Name="en" TargetIndex="2">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[httpURL_SDM]" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[pl]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[httpURL_SDM]" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[en]">
             <UInt32 Name="NumberOfTexts">1</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -42,7 +42,7 @@
               </TableRow>
             </Table>
             <Group Name="Texts">
-              <String Name="Text" Encoding="Unicode">"http://localhost/sdm-vga/vga.cgi"</String>
+              <String Name="Text" Encoding="Unicode">""</String>
             </Group>
           </Object>
         </Folder>
@@ -50,10 +50,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="de" TargetIndex="1">
+    <Folder Name="pl" TargetIndex="0">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[httpURL_SDM]" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[de]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[httpURL_SDM]" Type="TG" RefString="Source[global].TextGroup[httpURL_SDM].Language[pl]">
             <UInt32 Name="NumberOfTexts">1</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>

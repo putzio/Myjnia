@@ -4,7 +4,7 @@
   <Property Name="Description" Value="Texts for acknowledge state of an alarm - index 0-1 long, index 10-11 short"/>
   <Property Name="Index" Value="152"/>
   <TextSnippets/>
-  <TextLayer LanguageId="pl">
+  <TextLayer LanguageId="en">
     <Text ID="93646" Value="Acknowledged"/>
     <Text ID="93647" Value="Not Acknowledged"/>
     <Text ID="93648" Value="Acknowledged Reset"/>
@@ -19,6 +19,16 @@
     <Text ID="93647" Value="Unquittiert"/>
     <Text ID="93648" Value="Quittiert Resetiert"/>
     <Text ID="93649" Value="Resetiert Quittiert"/>
+    <Text ID="93650" Value="A"/>
+    <Text ID="93651" Value="nA"/>
+    <Text ID="93652" Value="RA"/>
+    <Text ID="93653" Value="AR"/>
+  </TextLayer>
+  <TextLayer LanguageId="pl">
+    <Text ID="93646" Value="Acknowledged"/>
+    <Text ID="93647" Value="Not Acknowledged"/>
+    <Text ID="93648" Value="Acknowledged Reset"/>
+    <Text ID="93649" Value="Reset Acknowledged"/>
     <Text ID="93650" Value="A"/>
     <Text ID="93651" Value="nA"/>
     <Text ID="93652" Value="RA"/>

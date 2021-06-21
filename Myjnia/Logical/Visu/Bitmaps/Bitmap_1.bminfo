@@ -10,7 +10,6 @@
   <Property Name="FillAreaLeft" Value="0"/>
   <Property Name="FillAreaTop" Value="0"/>
   <Property Name="FillAreas" Value="0"/>
-  <Property Name="Index" Value="0"/>
-  <Property Name="TargetFormat" Value="Raw8Bit"/>
-  <Property Name="Transparent" Value="False"/>
+  <Property Name="Index" Value="28"/>
+  <Property Name="TargetFormat" Value="Bmp32Bit"/>
 </Bitmap>

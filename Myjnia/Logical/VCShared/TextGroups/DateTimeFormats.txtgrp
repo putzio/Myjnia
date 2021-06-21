@@ -4,13 +4,18 @@
   <Property Name="Description" Value="Formats for Date and Time"/>
   <Property Name="Index" Value="0"/>
   <TextSnippets/>
-  <TextLayer LanguageId="pl">
-    <Text ID="93939" Value="%m/%d/%Y %H:%M:%S"/>
-    <Text ID="93940" Value="%H:%M:%S"/>
-    <Text ID="93941" Value="%H:%M"/>
+  <TextLayer LanguageId="en">
+    <Text ID="93939" Value=""/>
+    <Text ID="93940" Value=""/>
+    <Text ID="93941" Value=""/>
   </TextLayer>
   <TextLayer LanguageId="de">
     <Text ID="93939" Value="%d.%m.%Y %H:%M:%S"/>
+    <Text ID="93940" Value="%H:%M:%S"/>
+    <Text ID="93941" Value="%H:%M"/>
+  </TextLayer>
+  <TextLayer LanguageId="pl">
+    <Text ID="93939" Value="%m/%d/%Y %H:%M:%S"/>
     <Text ID="93940" Value="%H:%M:%S"/>
     <Text ID="93941" Value="%H:%M"/>
   </TextLayer>

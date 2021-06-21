@@ -2,6 +2,8 @@
   <BuildOption>
     <SourceFile Value="D:/Studia/VI/Myjnia/Myjnia/Myjnia/Physical/Config1/X20CP1382/Cpu.sw" />
     <Query Value="/ns:SwConfiguration/ns:TaskClass/*$$Name,Source" />
-    <Xml />
+    <Xml>
+      <Task Name="Program" Source="Program.prg" />
+    </Xml>
   </BuildOption>
 </BuildOptions>

@@ -5,7 +5,7 @@
     <Folder Name="POBJ">
       <Object Name="VNCServer" ClsId="0x20E" Version="1" Type="KS" RefString="Source[local].KeySource[VNCServer]">
         <Int32 Name="">0</Int32>
-        <Reference Name="KSTID" Type="KSTable">Source[local].KSTable[PS2-Keyboard]</Reference>
+        <Reference Name="KSTID" Type="KSTable" />
         <UInt16 Name="ResolutionX">800</UInt16>
         <UInt16 Name="ResolutionY">480</UInt16>
         <UInt16 Name="Port">5900</UInt16>
@@ -1420,56 +1420,56 @@
           </Group>
           <Group Name="ColorIndex 233">
             <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="G">138</Byte>
+            <Byte Name="R">255</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 234">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">71</Byte>
+            <Byte Name="G">169</Byte>
+            <Byte Name="R">255</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 235">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">1</Byte>
+            <Byte Name="G">123</Byte>
+            <Byte Name="R">253</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 236">
             <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="G">96</Byte>
+            <Byte Name="R">203</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 237">
             <Byte Name="B">0</Byte>
             <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="R">255</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 238">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">112</Byte>
+            <Byte Name="G">124</Byte>
+            <Byte Name="R">91</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 239">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">247</Byte>
+            <Byte Name="G">247</Byte>
+            <Byte Name="R">247</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 240">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">241</Byte>
+            <Byte Name="G">241</Byte>
+            <Byte Name="R">241</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 241">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">219</Byte>
+            <Byte Name="G">219</Byte>
+            <Byte Name="R">219</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 242">
@@ -2981,56 +2981,56 @@
           </Group>
           <Group Name="ColorIndex 233">
             <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="G">138</Byte>
+            <Byte Name="R">255</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 234">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">71</Byte>
+            <Byte Name="G">169</Byte>
+            <Byte Name="R">255</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 235">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">1</Byte>
+            <Byte Name="G">123</Byte>
+            <Byte Name="R">253</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 236">
             <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="G">96</Byte>
+            <Byte Name="R">203</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 237">
             <Byte Name="B">0</Byte>
             <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="R">255</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 238">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">112</Byte>
+            <Byte Name="G">124</Byte>
+            <Byte Name="R">91</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 239">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">247</Byte>
+            <Byte Name="G">247</Byte>
+            <Byte Name="R">247</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 240">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">241</Byte>
+            <Byte Name="G">241</Byte>
+            <Byte Name="R">241</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 241">
-            <Byte Name="B">0</Byte>
-            <Byte Name="G">0</Byte>
-            <Byte Name="R">0</Byte>
+            <Byte Name="B">219</Byte>
+            <Byte Name="G">219</Byte>
+            <Byte Name="R">219</Byte>
             <Byte Name="Reserved">0</Byte>
           </Group>
           <Group Name="ColorIndex 242">
@@ -3133,7 +3133,7 @@
       <Folder Name="POBJ">
         <Object Name="X20CP1382" ClsId="0x307" Version="1" Type="KSTable" RefString="Source[local].KSTable[X20CP1382]">
           <UInt16 Name="KeyCount">0</UInt16>
-          <UInt16 Name="LevelCount">4</UInt16>
+          <UInt16 Name="LevelCount">0</UInt16>
         </Object>
       </Folder>
     </Folder>

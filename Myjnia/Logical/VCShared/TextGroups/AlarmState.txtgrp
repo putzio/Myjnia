@@ -4,7 +4,7 @@
   <Property Name="Description" Value="Texts for alarm state - index 0-1 long, index 10-11 short"/>
   <Property Name="Index" Value="150"/>
   <TextSnippets/>
-  <TextLayer LanguageId="pl">
+  <TextLayer LanguageId="en">
     <Text ID="93642" Value="Inactive"/>
     <Text ID="93643" Value="Active"/>
     <Text ID="93644" Value="0"/>
@@ -13,6 +13,12 @@
   <TextLayer LanguageId="de">
     <Text ID="93642" Value="Inaktiv"/>
     <Text ID="93643" Value="Aktiv"/>
+    <Text ID="93644" Value="0"/>
+    <Text ID="93645" Value="1"/>
+  </TextLayer>
+  <TextLayer LanguageId="pl">
+    <Text ID="93642" Value="Inactive"/>
+    <Text ID="93643" Value="Active"/>
     <Text ID="93644" Value="0"/>
     <Text ID="93645" Value="1"/>
   </TextLayer>

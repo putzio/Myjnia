@@ -139,10 +139,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="pl" TargetIndex="0">
+    <Folder Name="en" TargetIndex="2">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Power_embedded]" Type="TG" RefString="Source[global].TextGroup[Power_embedded].Language[pl]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Power_embedded]" Type="TG" RefString="Source[global].TextGroup[Power_embedded].Language[en]">
             <UInt32 Name="NumberOfTexts">7</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -217,10 +217,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="de" TargetIndex="1">
+    <Folder Name="pl" TargetIndex="0">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Power_embedded]" Type="TG" RefString="Source[global].TextGroup[Power_embedded].Language[de]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Power_embedded]" Type="TG" RefString="Source[global].TextGroup[Power_embedded].Language[pl]">
             <UInt32 Name="NumberOfTexts">7</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -281,13 +281,13 @@
               </TableRow>
             </Table>
             <Group Name="Texts">
-              <String Name="Text" Encoding="Unicode">"Watt"</String>
+              <String Name="Text" Encoding="Unicode">"watt"</String>
               <String Name="Text" Encoding="Unicode">"W"</String>
-              <String Name="Text" Encoding="Unicode">"Kilowatt"</String>
+              <String Name="Text" Encoding="Unicode">"kilowatt"</String>
               <String Name="Text" Encoding="Unicode">"kW"</String>
               <String Name="Text" Encoding="Unicode">""</String>
               <String Name="Text" Encoding="Unicode">""</String>
-              <String Name="Text" Encoding="Unicode">"Watt"</String>
+              <String Name="Text" Encoding="Unicode">"watt"</String>
             </Group>
           </Object>
         </Folder>

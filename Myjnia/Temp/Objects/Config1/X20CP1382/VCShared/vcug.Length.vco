@@ -279,10 +279,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="pl" TargetIndex="0">
+    <Folder Name="en" TargetIndex="2">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Length_embedded]" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[pl]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Length_embedded]" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[en]">
             <UInt32 Name="NumberOfTexts">17</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -437,10 +437,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="de" TargetIndex="1">
+    <Folder Name="pl" TargetIndex="0">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Length_embedded]" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[de]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Length_embedded]" Type="TG" RefString="Source[global].TextGroup[Length_embedded].Language[pl]">
             <UInt32 Name="NumberOfTexts">17</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -571,23 +571,23 @@
               </TableRow>
             </Table>
             <Group Name="Texts">
-              <String Name="Text" Encoding="Unicode">"Millimeter"</String>
+              <String Name="Text" Encoding="Unicode">"millimeter"</String>
               <String Name="Text" Encoding="Unicode">"mm"</String>
-              <String Name="Text" Encoding="Unicode">"Zentimeter"</String>
+              <String Name="Text" Encoding="Unicode">"centimeter"</String>
               <String Name="Text" Encoding="Unicode">"cm"</String>
-              <String Name="Text" Encoding="Unicode">"Meter"</String>
+              <String Name="Text" Encoding="Unicode">"meter"</String>
               <String Name="Text" Encoding="Unicode">"m"</String>
-              <String Name="Text" Encoding="Unicode">"Zoll"</String>
               <String Name="Text" Encoding="Unicode">"inch"</String>
-              <String Name="Text" Encoding="Unicode">"Nanometer"</String>
+              <String Name="Text" Encoding="Unicode">"inch"</String>
+              <String Name="Text" Encoding="Unicode">"nanometer"</String>
               <String Name="Text" Encoding="Unicode">"nm"</String>
-              <String Name="Text" Encoding="Unicode">"Mikrometer"</String>
+              <String Name="Text" Encoding="Unicode">"micrometer"</String>
               <String Name="Text" Encoding="Unicode">"µm"</String>
               <String Name="Text" Encoding="Unicode">""</String>
               <String Name="Text" Encoding="Unicode">""</String>
-              <String Name="Text" Encoding="Unicode">"Fuss"</String>
+              <String Name="Text" Encoding="Unicode">"feet"</String>
               <String Name="Text" Encoding="Unicode">"ft"</String>
-              <String Name="Text" Encoding="Unicode">"Meter"</String>
+              <String Name="Text" Encoding="Unicode">"meter"</String>
             </Group>
           </Object>
         </Folder>

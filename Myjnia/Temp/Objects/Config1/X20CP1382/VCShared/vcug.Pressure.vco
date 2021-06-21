@@ -251,10 +251,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="pl" TargetIndex="0">
+    <Folder Name="en" TargetIndex="2">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Pressure_embedded]" Type="TG" RefString="Source[global].TextGroup[Pressure_embedded].Language[pl]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Pressure_embedded]" Type="TG" RefString="Source[global].TextGroup[Pressure_embedded].Language[en]">
             <UInt32 Name="NumberOfTexts">15</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -393,10 +393,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="de" TargetIndex="1">
+    <Folder Name="pl" TargetIndex="0">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Pressure_embedded]" Type="TG" RefString="Source[global].TextGroup[Pressure_embedded].Language[de]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Pressure_embedded]" Type="TG" RefString="Source[global].TextGroup[Pressure_embedded].Language[pl]">
             <UInt32 Name="NumberOfTexts">15</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -513,21 +513,21 @@
               </TableRow>
             </Table>
             <Group Name="Texts">
-              <String Name="Text" Encoding="Unicode">"Bar"</String>
+              <String Name="Text" Encoding="Unicode">"bar"</String>
               <String Name="Text" Encoding="Unicode">"bar"</String>
               <String Name="Text" Encoding="Unicode">""</String>
               <String Name="Text" Encoding="Unicode">""</String>
-              <String Name="Text" Encoding="Unicode">"Millibar"</String>
+              <String Name="Text" Encoding="Unicode">"millibar"</String>
               <String Name="Text" Encoding="Unicode">"mbar"</String>
-              <String Name="Text" Encoding="Unicode">"Mikrobar"</String>
+              <String Name="Text" Encoding="Unicode">"microbar"</String>
               <String Name="Text" Encoding="Unicode">"µbar"</String>
-              <String Name="Text" Encoding="Unicode">"Pascal"</String>
+              <String Name="Text" Encoding="Unicode">"pascal"</String>
               <String Name="Text" Encoding="Unicode">"Pa"</String>
-              <String Name="Text" Encoding="Unicode">"Kilopascal"</String>
+              <String Name="Text" Encoding="Unicode">"kilopascal"</String>
               <String Name="Text" Encoding="Unicode">"kPa"</String>
-              <String Name="Text" Encoding="Unicode">"Megapascal"</String>
+              <String Name="Text" Encoding="Unicode">"megapascal"</String>
               <String Name="Text" Encoding="Unicode">"MPa"</String>
-              <String Name="Text" Encoding="Unicode">"Pascal"</String>
+              <String Name="Text" Encoding="Unicode">"pascal"</String>
             </Group>
           </Object>
         </Folder>

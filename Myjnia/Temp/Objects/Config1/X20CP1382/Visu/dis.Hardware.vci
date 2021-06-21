@@ -3,7 +3,7 @@
   <PanelMap>
     <PanelItems />
     <Property Name="Type" Value="X20CP1382" />
-    <Property Name="NumLevel" Value="4" />
+    <Property Name="NumLevel" Value="0" />
     <Property Name="IsLocal" Value="False" />
     <Property Name="IsTerminal" Value="False" />
     <Property Name="IsVncSlave" Value="False" />
@@ -19,8 +19,8 @@
     <Property Name="AnslAuthPassword" Value="" />
     <Property Name="AnslPort" Value="0" />
     <Property Name="AnslUseSsl" Value="False" />
-    <Property Name="VNCKeyboard" Value="PS2-Keyboard" />
-    <Property Name="VNCKeyboardFile" Value="VC\PS2-Keyboard.dis" />
+    <Property Name="VNCKeyboard" Value="None" />
+    <Property Name="VNCKeyboardFile" Value="" />
     <Property Name="VNCKeyLedCount" Value="True" />
     <Property Name="LedCount" Value="0" />
     <Property Name="KeyCount" Value="0" />
@@ -259,15 +259,15 @@
       <PaletteColor Index="230" Value="#003300" />
       <PaletteColor Index="231" Value="#000000" />
       <PaletteColor Index="232" Value="#000000" />
-      <PaletteColor Index="233" Value="#000000" />
-      <PaletteColor Index="234" Value="#000000" />
-      <PaletteColor Index="235" Value="#000000" />
-      <PaletteColor Index="236" Value="#000000" />
-      <PaletteColor Index="237" Value="#000000" />
-      <PaletteColor Index="238" Value="#000000" />
-      <PaletteColor Index="239" Value="#000000" />
-      <PaletteColor Index="240" Value="#000000" />
-      <PaletteColor Index="241" Value="#000000" />
+      <PaletteColor Index="233" Value="#FF8A00" />
+      <PaletteColor Index="234" Value="#FFA947" />
+      <PaletteColor Index="235" Value="#FD7B01" />
+      <PaletteColor Index="236" Value="#CB6000" />
+      <PaletteColor Index="237" Value="#FF0000" />
+      <PaletteColor Index="238" Value="#5B7C70" />
+      <PaletteColor Index="239" Value="#F7F7F7" />
+      <PaletteColor Index="240" Value="#F1F1F1" />
+      <PaletteColor Index="241" Value="#DBDBDB" />
       <PaletteColor Index="242" Value="#000000" />
       <PaletteColor Index="243" Value="#000000" />
       <PaletteColor Index="244" Value="#000000" />

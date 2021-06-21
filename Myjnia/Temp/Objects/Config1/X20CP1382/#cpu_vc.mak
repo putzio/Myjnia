@@ -24,6 +24,7 @@ export AS_WORKINGVERSION := 4.9
 
 default: \
 	$(AS_CPU_PATH)/Visu.br \
+	vcPostBuild_Visu \
 
 
 

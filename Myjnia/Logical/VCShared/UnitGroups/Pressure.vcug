@@ -12,7 +12,7 @@
     <Property Name="Description" Value=""/>
     <Property Name="Index" Value="65535"/>
     <TextSnippets/>
-    <TextLayer LanguageId="pl">
+    <TextLayer LanguageId="en">
       <Text ID="263" Value="bar"/>
       <Text ID="264" Value="bar"/>
       <Text ID="7585" Value=""/>
@@ -45,6 +45,23 @@
       <Text ID="86730" Value="Megapascal"/>
       <Text ID="86731" Value="MPa"/>
       <Text ID="87058" Value="Pascal"/>
+    </TextLayer>
+    <TextLayer LanguageId="pl">
+      <Text ID="263" Value="bar"/>
+      <Text ID="264" Value="bar"/>
+      <Text ID="7585" Value=""/>
+      <Text ID="7586" Value=""/>
+      <Text ID="8535" Value="millibar"/>
+      <Text ID="8536" Value="mbar"/>
+      <Text ID="8537" Value="microbar"/>
+      <Text ID="8538" Value="µbar"/>
+      <Text ID="86422" Value="pascal"/>
+      <Text ID="86423" Value="Pa"/>
+      <Text ID="86728" Value="kilopascal"/>
+      <Text ID="86729" Value="kPa"/>
+      <Text ID="86730" Value="megapascal"/>
+      <Text ID="86731" Value="MPa"/>
+      <Text ID="87058" Value="pascal"/>
     </TextLayer>
     <IndexMap>
       <Index ID="263" Value="1"/>

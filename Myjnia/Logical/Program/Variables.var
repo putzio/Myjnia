@@ -5,22 +5,10 @@ VAR
 	cabin_temp : INT;
 	water_heater : BOOL;
 	cabin_heater : BOOL;
-	foam_pump : BOOL;
 	water_pump : BOOL;
-	demi_water_pump : BOOL;
-	wax_pump : BOOL;
-	start : BOOL;
 	TON_1 : TON;
-	TON_wejscie : BOOL;
-	time : TIME;
-	shine_pump : BOOL;
-	zl_1 : BOOL;
-	zl_2 : BOOL;
-	zl_5 : BOOL;
-	btn_piana : BOOL;
-	btn_woda : BOOL;
-	btn_wax : BOOL;
-	btn_water : BOOL;
-	btn_shine : BOOL;
-	btn_foam : BOOL;
+	time : DINT;
+	foam_valve : BOOL;
+	wax_valve : BOOL;
+	shine_valve : BOOL;
 END_VAR

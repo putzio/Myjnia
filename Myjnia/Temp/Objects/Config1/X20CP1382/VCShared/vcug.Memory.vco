@@ -167,10 +167,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="pl" TargetIndex="0">
+    <Folder Name="en" TargetIndex="2">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Memory_embedded]" Type="TG" RefString="Source[global].TextGroup[Memory_embedded].Language[pl]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Memory_embedded]" Type="TG" RefString="Source[global].TextGroup[Memory_embedded].Language[en]">
             <UInt32 Name="NumberOfTexts">9</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -261,10 +261,10 @@
     </Folder>
   </Folder>
   <Folder Name="Language">
-    <Folder Name="de" TargetIndex="1">
+    <Folder Name="pl" TargetIndex="0">
       <Folder Name="TextGroups">
         <Folder Name="POBJ">
-          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Memory_embedded]" Type="TG" RefString="Source[global].TextGroup[Memory_embedded].Language[de]">
+          <Object Name="TextGroupData" ClsId="0x303" Version="1" TargetIndex="Source[global].TextGroup[Memory_embedded]" Type="TG" RefString="Source[global].TextGroup[Memory_embedded].Language[pl]">
             <UInt32 Name="NumberOfTexts">9</UInt32>
             <Table Name="TextOffsets" Cols="5">
               <TableHeader>
@@ -339,15 +339,15 @@
               </TableRow>
             </Table>
             <Group Name="Texts">
-              <String Name="Text" Encoding="Unicode">"Byte"</String>
+              <String Name="Text" Encoding="Unicode">"byte"</String>
               <String Name="Text" Encoding="Unicode">"B"</String>
-              <String Name="Text" Encoding="Unicode">"KiloByte"</String>
+              <String Name="Text" Encoding="Unicode">"kilobyte"</String>
               <String Name="Text" Encoding="Unicode">"kB"</String>
               <String Name="Text" Encoding="Unicode">""</String>
               <String Name="Text" Encoding="Unicode">""</String>
-              <String Name="Text" Encoding="Unicode">"MegaByte"</String>
+              <String Name="Text" Encoding="Unicode">"megabyte"</String>
               <String Name="Text" Encoding="Unicode">"MB"</String>
-              <String Name="Text" Encoding="Unicode">"Byte"</String>
+              <String Name="Text" Encoding="Unicode">"byte"</String>
             </Group>
           </Object>
         </Folder>

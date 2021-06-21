@@ -12,7 +12,7 @@
     <Property Name="Description" Value=""/>
     <Property Name="Index" Value="65535"/>
     <TextSnippets/>
-    <TextLayer LanguageId="pl">
+    <TextLayer LanguageId="en">
       <Text ID="115" Value="millimeter"/>
       <Text ID="116" Value="mm"/>
       <Text ID="117" Value="centimeter"/>
@@ -49,6 +49,25 @@
       <Text ID="86777" Value="Fuss"/>
       <Text ID="86778" Value="ft"/>
       <Text ID="87007" Value="Meter"/>
+    </TextLayer>
+    <TextLayer LanguageId="pl">
+      <Text ID="115" Value="millimeter"/>
+      <Text ID="116" Value="mm"/>
+      <Text ID="117" Value="centimeter"/>
+      <Text ID="118" Value="cm"/>
+      <Text ID="119" Value="meter"/>
+      <Text ID="120" Value="m"/>
+      <Text ID="176" Value="inch"/>
+      <Text ID="177" Value="inch"/>
+      <Text ID="186" Value="nanometer"/>
+      <Text ID="187" Value="nm"/>
+      <Text ID="188" Value="micrometer"/>
+      <Text ID="189" Value="µm"/>
+      <Text ID="7579" Value=""/>
+      <Text ID="7580" Value=""/>
+      <Text ID="86777" Value="feet"/>
+      <Text ID="86778" Value="ft"/>
+      <Text ID="87007" Value="meter"/>
     </TextLayer>
     <IndexMap>
       <Index ID="115" Value="1"/>

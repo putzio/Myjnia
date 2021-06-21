@@ -1,21 +1,21 @@
-Tue Jun 15 10:10:45 2021
+Mon Jun 21 16:27:13 2021
 COPYRIGHT (C) B&R Industrial Automation GmbH
 
-Tue Jun 15 10:10:45 2021
+Mon Jun 21 16:27:13 2021
 No ARsim registration found!
 
-Tue Jun 15 10:10:45 2021
-InstanceName: 01d761bdf1213ec0
+Mon Jun 21 16:27:13 2021
+InstanceName: 01d766a9872df080
 
-Tue Jun 15 10:10:45 2021
+Mon Jun 21 16:27:13 2021
 WorkingDirectory: D:\Studia\VI\Myjnia\Myjnia\Myjnia\Temp\Simulation\Config1\X20CP1382\
 
-Tue Jun 15 10:10:45 2021
+Mon Jun 21 16:27:13 2021
 COMMAND_COLDSTART
 
-Tue Jun 15 10:10:47 2021
+Mon Jun 21 16:27:43 2021
 Version: B4.83
 
-Tue Jun 15 11:41:29 2021
+Mon Jun 21 16:28:01 2021
 COMMAND_TERMINATE
 

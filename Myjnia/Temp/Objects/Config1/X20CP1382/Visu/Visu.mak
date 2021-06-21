@@ -46,7 +46,7 @@ ifneq ($(VCINC),1)
 endif
 
 DEPENDENCIES_Visu=-d vcgclass -profile 'False'
-DEFAULT_STYLE_SHEET_Visu='Source[local].StyleSheet[Color]'
+DEFAULT_STYLE_SHEET_Visu='Source[local].StyleSheet[Default]'
 SHARED_MODULE=$(TEMP_PATH_ROOT_Visu)/Objects/$(AS_CONFIGURATION)/$(AS_TEMP_PLC)/vcshared.br
 LFNTFLAGS_Visu=-P '$(AS_PROJECT_PATH)' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)'
 BDRFLAGS_Visu=-P '$(AS_PROJECT_PATH)' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)'
@@ -61,32 +61,206 @@ PANEL_HW_SOURCE_Visu=D:/Studia/VI/Myjnia/Myjnia/Myjnia/Physical/Config1/Hardware
 DIS_OBJECTS_Visu=$(PANEL_HW_OBJECT_Visu) $(KEYMAP_OBJECTS_Visu)
 
 # KeyMapping flags
-$(TEMP_PATH_Visu)/dis.PS2-Keyboard.vco: $(AS_PROJECT_PATH)/Physical/Config1/X20CP1382/VC/PS2-Keyboard.dis $(PANEL_HW_SOURCE_Visu)
-	$(VCHWPP) -f '$(PANEL_HW_SOURCE_Visu)' -o '$(subst .vco,.vci,$(TEMP_PATH_Visu)/dis.PS2-Keyboard.vco)' -n Visu -d Visu -pal '$(PALFILE_Visu)' -c '$(AS_CONFIGURATION)' -p '$(AS_PLC)' -ptemp '$(AS_TEMP_PLC)' -B 'B4.83' -L '' -hw '$(CPUHWC)' -warninglevel 2 -so $(VC_STATIC_OPTIONS_Visu) -sos $(VC_STATIC_OPTIONS_Shared) -keyboard '$(AS_PROJECT_PATH)/Physical/Config1/X20CP1382/VC/PS2-Keyboard.dis' -fp '$(AS_VC_PATH)/Firmware/V4.72.2/SG4' -prj '$(AS_PROJECT_PATH)' -apj 'Myjnia' -sfas -vcob '$(VCOBJECT_Visu)'
-	$(VCC) -f '$(subst .vco,.vci,$@)' -o '$@' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -k '$(VCVK_SOURCES_Visu)' $(VCCFLAGS_Visu) -p Visu -sfas
-
-KEYMAP_SOURCES_Visu=$(AS_PROJECT_PATH)/Physical/Config1/X20CP1382/VC/PS2-Keyboard.dis 
-KEYMAP_OBJECTS_Visu=$(TEMP_PATH_Visu)/dis.PS2-Keyboard.vco 
+KEYMAP_SOURCES_Visu=
+KEYMAP_OBJECTS_Visu=
 
 # All Source Objects
-TXTGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/TextGroup_1.txtgrp 
+TXTGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/InstantMessages.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/HeaderBar.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/PageNames.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Buttons_PageTexts.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Languages.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/NumPad_Limits.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/DateTimeFormats.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/httpURL_SDM.txtgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Programy.txtgrp 
 
-FNINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Fonts/DefaultFont.fninfo 
+FNINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Info.fninfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Html_SDM.fninfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Default.fninfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Header.fninfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Button.fninfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Input.fninfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Status.fninfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Fonts/Pads.fninfo 
 
-BMINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo \
+BMINFO_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_AcknowledgeReset.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Active.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_BypassOFF.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_BypassON.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Inactive.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Latched.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_NotQuit.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Quit.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Reset.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_ResetAcknowledge.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Triggered.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/ProgressBorder.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/alarm.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_checked.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_default.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_default_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_global_area.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_global_area_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/information.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_left.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_left_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_multi.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_multi_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_multi.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_multi_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_radio_selected.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_radio.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_right.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_right_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/warning.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_decrease_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_increase.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_increase_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_decrease.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/frame_header.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small_checked.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BorderSlider09x09.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Slider_BallGray.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/gauge_200x200_round_nodiv.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/gauge_NeedleRed100x11_1.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small_gray.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/FrameInvisible.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_off.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_on.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_ready.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_error.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BackTransparent.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_Numpad.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_Numpad_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_lower.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_upper.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric2.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_lowerPressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_upperPressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numericPressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric2Pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadVer.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadVer_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadHor.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadHor_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_lower.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_upper.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric2.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_lowerPressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_upperPressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numericPressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric2Pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/InputBorder.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/OutputBorder.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/LabelBoarder.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/GroupControl.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Config.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Diagnostics.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Home.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Trend.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Warning.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_control.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_control_pressed.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BackgroundWVGA.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo \
 	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_2.bminfo \
-	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_5.bminfo \
-	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_STOP.bminfo 
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.bminfo \
+	$(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_4.bminfo 
 
-BMGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/BitmapGroup_1.bmgrp 
+BMGRP_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmAcknowledgeState.bmgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmBypassState.bmgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmEvent.bmgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmState.bmgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/Borders.bmgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/GlobalArea.bmgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/Pads.bmgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/msgBox.bmgrp \
+	$(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/coins.bmgrp 
 
-PAGE_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Pages/Page_1.page 
+PAGE_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl10_MainPage.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl60_Setup.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl20_TrendPage.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl30_AlarmPage.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl31_AlarmHistoryPage.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl61_SystemDiagnostics.page \
+	$(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl00_StartPage.page 
 
-VCS_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/StyleSheets/Color.vcs 
+LAYER_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Layers/globalArea.layer \
+	$(AS_PROJECT_PATH)/Logical/Visu/Layers/msgBox.layer \
+	$(AS_PROJECT_PATH)/Logical/Visu/Layers/Background.layer 
+
+VCS_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/StyleSheets/Default.vcs 
+
+BDR_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Decrease.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Decrease_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Global_Area.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Global_Area_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Increase.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Increase_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Multi_Scroll_Down.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Multi_Scroll_Down_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Multi_Scroll_Up.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Multi_Scroll_Up_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Radio.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Radio_selected.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scoll_Up.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scoll_Up_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Down.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Down_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Left.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Left_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Right.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Right_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/SunkenNG.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/CheckBox_checked.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Flat_black.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Flat_grey.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/OverdriveBorder.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/ProgressBarBorder.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/RaisedInner.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Raised.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/SliderBorder09.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/SunkenOuter.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Sunken.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/SunkenNGgray.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/FrameGlobal.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/FrameInvisible.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_KeyRingOff.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_KeyRingOn.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/OutputBorder.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/InputBorder.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/GroupControl.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/LabelBoarder.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Control.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Control_pressed.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/TabActive.bdr \
+	$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button1.bdr 
+
+TPR_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/TouchPads/NumPad.tpr \
+	$(AS_PROJECT_PATH)/Logical/Visu/TouchPads/AlphaPad.tpr \
+	$(AS_PROJECT_PATH)/Logical/Visu/TouchPads/NavigationPad_ver.tpr \
+	$(AS_PROJECT_PATH)/Logical/Visu/TouchPads/NavigationPad_hor.tpr \
+	$(AS_PROJECT_PATH)/Logical/Visu/TouchPads/EditPad.tpr 
 
 TDC_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Trends/TrendData.tdc 
 
-CLM_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/ColorMaps/G_LED.clm 
+TRD_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Trends/CPUTemperature.trd \
+	$(AS_PROJECT_PATH)/Logical/Visu/Trends/ROOMTemperature.trd 
+
+TRE_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Trends/Trend_Temperature.tre 
+
+CLM_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/ColorMaps/LED.clm 
 
 VCVK_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/VirtualKeys.vcvk 
 
@@ -108,8 +282,32 @@ $(PANEL_HW_OBJECT_Visu): $(PANEL_HW_VCI_Visu) $(VC_LIBRARY_LIST_Visu)
 # Pages
 PAGE_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/page., $(notdir $(PAGE_SOURCES_Visu:.page=.vco)))
 
-$(TEMP_PATH_Visu)/page.Page_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Page_1.page $(VC_LANGUAGES_Visu)
-	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Color.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+$(TEMP_PATH_Visu)/page.tmpl10_MainPage.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl10_MainPage.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/page.tmpl60_Setup.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl60_Setup.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/page.tmpl20_TrendPage.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl20_TrendPage.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/page.tmpl30_AlarmPage.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl30_AlarmPage.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/page.tmpl31_AlarmHistoryPage.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl31_AlarmHistoryPage.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/page.tmpl61_SystemDiagnostics.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl61_SystemDiagnostics.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/page.tmpl00_StartPage.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/tmpl00_StartPage.page $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds '$(SRC_PATH_Visu)/StyleSheets/Default.vcs' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
 #Pages END
@@ -120,11 +318,31 @@ $(TEMP_PATH_Visu)/page.Page_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Pages/Page_1.
 # Stylesheets
 VCS_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/vcs., $(notdir $(VCS_SOURCES_Visu:.vcs=.vco)))
 
-$(TEMP_PATH_Visu)/vcs.Color.vco: $(AS_PROJECT_PATH)/Logical/Visu/StyleSheets/Color.vcs
+$(TEMP_PATH_Visu)/vcs.Default.vco: $(AS_PROJECT_PATH)/Logical/Visu/StyleSheets/Default.vcs
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -P '$(AS_PROJECT_PATH)' -ds $(DEFAULT_STYLE_SHEET_Visu) -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
 #Stylesheets END
+
+
+
+
+# Layers
+LAYER_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/layer., $(notdir $(LAYER_SOURCES_Visu:.layer=.vco)))
+
+$(TEMP_PATH_Visu)/layer.globalArea.vco: $(AS_PROJECT_PATH)/Logical/Visu/Layers/globalArea.layer $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -ds $(DEFAULT_STYLE_SHEET_Visu) -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/layer.msgBox.vco: $(AS_PROJECT_PATH)/Logical/Visu/Layers/msgBox.layer $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -ds $(DEFAULT_STYLE_SHEET_Visu) -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/layer.Background.vco: $(AS_PROJECT_PATH)/Logical/Visu/Layers/Background.layer $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -ds $(DEFAULT_STYLE_SHEET_Visu) -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+#Layers END
 
 
 
@@ -142,10 +360,70 @@ $(VCVK_OBJECTS_Visu): $(VC_LANGUAGES_Visu)
 
 
 
+# Touch Pads
+TPR_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/tpr., $(notdir $(TPR_SOURCES_Visu:.tpr=.vco)))
+
+$(TEMP_PATH_Visu)/tpr.NumPad.vco: $(AS_PROJECT_PATH)/Logical/Visu/TouchPads/NumPad.tpr
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -prj 'D:/Studia/VI/Myjnia/Myjnia/Myjnia/Logical/Visu' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/tpr.AlphaPad.vco: $(AS_PROJECT_PATH)/Logical/Visu/TouchPads/AlphaPad.tpr
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -prj 'D:/Studia/VI/Myjnia/Myjnia/Myjnia/Logical/Visu' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/tpr.NavigationPad_ver.vco: $(AS_PROJECT_PATH)/Logical/Visu/TouchPads/NavigationPad_ver.tpr
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -prj 'D:/Studia/VI/Myjnia/Myjnia/Myjnia/Logical/Visu' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/tpr.NavigationPad_hor.vco: $(AS_PROJECT_PATH)/Logical/Visu/TouchPads/NavigationPad_hor.tpr
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -prj 'D:/Studia/VI/Myjnia/Myjnia/Myjnia/Logical/Visu' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/tpr.EditPad.vco: $(AS_PROJECT_PATH)/Logical/Visu/TouchPads/EditPad.tpr
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu) -prj 'D:/Studia/VI/Myjnia/Myjnia/Myjnia/Logical/Visu' -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+#Touch Pads END
+
+
+
+
 # Text Groups
 TXTGRP_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/txtgrp., $(notdir $(TXTGRP_SOURCES_Visu:.txtgrp=.vco)))
 
-$(TEMP_PATH_Visu)/txtgrp.TextGroup_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/TextGroup_1.txtgrp $(VC_LANGUAGES_Visu)
+$(TEMP_PATH_Visu)/txtgrp.InstantMessages.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/InstantMessages.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/txtgrp.HeaderBar.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/HeaderBar.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/txtgrp.PageNames.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/PageNames.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/txtgrp.Buttons_PageTexts.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Buttons_PageTexts.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/txtgrp.Languages.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Languages.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/txtgrp.NumPad_Limits.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/NumPad_Limits.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/txtgrp.DateTimeFormats.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/DateTimeFormats.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/txtgrp.httpURL_SDM.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/httpURL_SDM.txtgrp $(VC_LANGUAGES_Visu)
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/txtgrp.Programy.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGroups/Programy.txtgrp $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
@@ -157,7 +435,39 @@ $(TEMP_PATH_Visu)/txtgrp.TextGroup_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/TextGr
 # BitmapGroups
 BMGRP_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/bmgrp., $(notdir $(BMGRP_SOURCES_Visu:.bmgrp=.vco)))
 
-$(TEMP_PATH_Visu)/bmgrp.BitmapGroup_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/BitmapGroup_1.bmgrp
+$(TEMP_PATH_Visu)/bmgrp.AlarmAcknowledgeState.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmAcknowledgeState.bmgrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bmgrp.AlarmBypassState.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmBypassState.bmgrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bmgrp.AlarmEvent.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmEvent.bmgrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bmgrp.AlarmState.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/AlarmState.bmgrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bmgrp.Borders.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/Borders.bmgrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bmgrp.GlobalArea.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/GlobalArea.bmgrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bmgrp.Pads.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/Pads.bmgrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bmgrp.msgBox.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/msgBox.bmgrp
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bmgrp.coins.vco: $(AS_PROJECT_PATH)/Logical/Visu/BitmapGroups/coins.bmgrp
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
@@ -169,6 +479,354 @@ $(TEMP_PATH_Visu)/bmgrp.BitmapGroup_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitma
 # Bitmaps
 BMINFO_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/bminfo., $(notdir $(BMINFO_SOURCES_Visu:.bminfo=.vco)))
 
+$(TEMP_PATH_Visu)/bminfo.Alarm_AcknowledgeReset.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_AcknowledgeReset.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_AcknowledgeReset.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_Active.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Active.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Active.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_BypassOFF.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_BypassOFF.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_BypassOFF.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_BypassON.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_BypassON.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_BypassON.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_Inactive.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Inactive.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Inactive.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_Latched.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Latched.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Latched.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_NotQuit.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_NotQuit.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_NotQuit.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_Quit.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Quit.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Quit.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_Reset.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Reset.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Reset.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_ResetAcknowledge.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_ResetAcknowledge.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_ResetAcknowledge.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Alarm_Triggered.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Triggered.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Alarm_Triggered.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.ProgressBorder.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/ProgressBorder.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/ProgressBorder.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.alarm.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/alarm.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/alarm.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.checkbox.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.checkbox_checked.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_checked.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_checked.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_default.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_default.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_default.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_default_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_default_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_default_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_down.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_global_area.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_global_area.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_global_area.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_global_area_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_global_area_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_global_area_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.information.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/information.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/information.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_left.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_left.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_left.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_left_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_left_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_left_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_down_multi.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_multi.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_multi.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_down_multi_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_multi_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_multi_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_up_multi.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_multi.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_multi.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_up_multi_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_multi_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_multi_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_radio_selected.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_radio_selected.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_radio_selected.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_radio.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_radio.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_radio.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_right.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_right.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_right.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_right_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_right_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_right_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_up.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_up_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_up_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.warning.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/warning.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/warning.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_decrease_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_decrease_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_decrease_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_increase.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_increase.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_increase.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_increase_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_increase_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_increase_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_decrease.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_decrease.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_decrease.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.frame_header.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/frame_header.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/frame_header.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.checkbox_small.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.checkbox_small_checked.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small_checked.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small_checked.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.BorderSlider09x09.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BorderSlider09x09.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BorderSlider09x09.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Slider_BallGray.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Slider_BallGray.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Slider_BallGray.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.gauge_200x200_round_nodiv.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/gauge_200x200_round_nodiv.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/gauge_200x200_round_nodiv.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.gauge_NeedleRed100x11_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/gauge_NeedleRed100x11_1.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/gauge_NeedleRed100x11_1.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.checkbox_small_gray.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small_gray.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/checkbox_small_gray.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.FrameInvisible.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/FrameInvisible.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/FrameInvisible.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_off.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_off.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_off.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_on.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_on.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_on.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_ready.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_ready.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_ready.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_error.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_error.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_error.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.BackTransparent.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BackTransparent.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BackTransparent.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_Numpad.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_Numpad.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_Numpad.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_Numpad_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_Numpad_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_Numpad_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_AlphaPad_lower.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_lower.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_lower.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_AlphaPad_upper.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_upper.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_upper.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_AlphaPad_numeric.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_AlphaPad_numeric2.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric2.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric2.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_AlphaPad_lowerPressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_lowerPressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_lowerPressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_AlphaPad_upperPressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_upperPressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_upperPressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_AlphaPad_numericPressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numericPressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numericPressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_AlphaPad_numeric2Pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric2Pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_AlphaPad_numeric2Pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_ListPadVer.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadVer.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadVer.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_ListPadVer_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadVer_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadVer_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_ListPadHor.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadHor.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadHor.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_ListPadHor_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadHor_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_ListPadHor_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_EditPad_lower.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_lower.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_lower.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_EditPad_upper.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_upper.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_upper.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_EditPad_numeric.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_EditPad_numeric2.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric2.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric2.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_EditPad_lowerPressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_lowerPressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_lowerPressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_EditPad_upperPressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_upperPressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_upperPressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_EditPad_numericPressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numericPressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numericPressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Key_EditPad_numeric2Pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric2Pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Key_EditPad_numeric2Pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.InputBorder.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/InputBorder.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/InputBorder.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_scroll_down_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_scroll_down_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.OutputBorder.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/OutputBorder.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/OutputBorder.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.LabelBoarder.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/LabelBoarder.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/LabelBoarder.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.GroupControl.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/GroupControl.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/GroupControl.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Img_Config.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Config.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Config.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Img_Diagnostics.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Diagnostics.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Diagnostics.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Img_Home.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Home.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Home.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Img_Trend.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Trend.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Trend.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.Img_Warning.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Warning.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Img_Warning.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_control.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_control.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_control.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.button_control_pressed.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_control_pressed.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/button_control_pressed.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/bminfo.BackgroundWVGA.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BackgroundWVGA.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/BackgroundWVGA.png
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
 $(TEMP_PATH_Visu)/bminfo.Bitmap_1.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_1.jpg
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
@@ -177,15 +835,43 @@ $(TEMP_PATH_Visu)/bminfo.Bitmap_2.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/B
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
-$(TEMP_PATH_Visu)/bminfo.Bitmap_5.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_5.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_5.jpg
+$(TEMP_PATH_Visu)/bminfo.Bitmap_3.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_3.jpg
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
-$(TEMP_PATH_Visu)/bminfo.Bitmap_STOP.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_STOP.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_STOP.png
+$(TEMP_PATH_Visu)/bminfo.Bitmap_4.vco: $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_4.bminfo $(AS_PROJECT_PATH)/Logical/Visu/Bitmaps/Bitmap_4.png
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
 #Bitmaps END
+
+
+
+
+# Trend Configuration
+TRE_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/tre., $(notdir $(TRE_SOURCES_Visu:.tre=.vco)))
+
+$(TEMP_PATH_Visu)/tre.Trend_Temperature.vco: $(AS_PROJECT_PATH)/Logical/Visu/Trends/Trend_Temperature.tre
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+#Trend Configuration END
+
+
+
+
+# Trend Data
+TRD_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/trd., $(notdir $(TRD_SOURCES_Visu:.trd=.vco)))
+
+$(TEMP_PATH_Visu)/trd.CPUTemperature.vco: $(AS_PROJECT_PATH)/Logical/Visu/Trends/CPUTemperature.trd
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+$(TEMP_PATH_Visu)/trd.ROOMTemperature.vco: $(AS_PROJECT_PATH)/Logical/Visu/Trends/ROOMTemperature.trd
+	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
+
+
+#Trend Data END
 
 
 
@@ -205,7 +891,7 @@ $(TEMP_PATH_Visu)/tdc.TrendData.vco: $(AS_PROJECT_PATH)/Logical/Visu/Trends/Tren
 # ColorMap Table
 CLM_OBJECTS_Visu = $(addprefix $(TEMP_PATH_Visu)/clm., $(notdir $(CLM_SOURCES_Visu:.clm=.vco)))
 
-$(TEMP_PATH_Visu)/clm.G_LED.vco: $(AS_PROJECT_PATH)/Logical/Visu/ColorMaps/G_LED.clm
+$(TEMP_PATH_Visu)/clm.LED.vco: $(AS_PROJECT_PATH)/Logical/Visu/ColorMaps/LED.clm
 	 $(VCC) -f '$<' -o '$@' -l '$(AS_PROJECT_PATH)/Logical/VCShared/Languages.vcr' -cv '$(AS_PROJECT_PATH)/Logical/VCShared/ControlVersion.cvinfo' -pal '$(PALFILE_Visu)' $(VCCFLAGS_Visu)  -p Visu -so $(VC_STATIC_OPTIONS_Visu) -vcr 4722 -sfas
 
 
@@ -213,13 +899,20 @@ $(TEMP_PATH_Visu)/clm.G_LED.vco: $(AS_PROJECT_PATH)/Logical/Visu/ColorMaps/G_LED
 
 
 #
+# Borders
+#
+BDR_SOURCES_Visu=$(AS_PROJECT_PATH)/Logical/Visu/Borders/Button.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Decrease.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Decrease_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Global_Area.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Global_Area_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Increase.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Increase_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Multi_Scroll_Down.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Multi_Scroll_Down_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Multi_Scroll_Up.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Multi_Scroll_Up_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Radio.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Radio_selected.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scoll_Up.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scoll_Up_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Down.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Down_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Left.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Left_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Right.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Scroll_Right_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/SunkenNG.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/CheckBox_checked.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Flat_black.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Flat_grey.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/OverdriveBorder.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/ProgressBarBorder.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/RaisedInner.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Raised.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/SliderBorder09.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/SunkenOuter.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Sunken.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/SunkenNGgray.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/FrameGlobal.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/FrameInvisible.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_KeyRingOff.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_KeyRingOn.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/OutputBorder.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/InputBorder.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/GroupControl.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/LabelBoarder.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Control.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button_Control_pressed.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/TabActive.bdr $(AS_PROJECT_PATH)/Logical/Visu/Borders/Button1.bdr 
+BDR_OBJECTS_Visu=$(TEMP_PATH_Visu)/bdr.Bordermanager.vco
+$(TEMP_PATH_Visu)/bdr.Bordermanager.vco: $(BDR_SOURCES_Visu)
+	$(VCC) -f '$<' -o '$@' -pkg '$(SRC_PATH_Visu)' $(BDRFLAGS_Visu) $(VCCFLAGS_Visu) -p Visu$(SRC_PATH_Visu)
+#
 # Logical fonts
 #
-$(TEMP_PATH_Visu)/lfnt.de.vco: $(TEMP_PATH_Visu)/de.lfnt $(VC_LANGUAGES_Visu)
+$(TEMP_PATH_Visu)/lfnt.en.vco: $(TEMP_PATH_Visu)/en.lfnt $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' $(LFNTFLAGS_Visu) $(VCCFLAGS_Visu) -p Visu -sfas
 $(TEMP_PATH_Visu)/lfnt.pl.vco: $(TEMP_PATH_Visu)/pl.lfnt $(VC_LANGUAGES_Visu)
 	 $(VCC) -f '$<' -o '$@' $(LFNTFLAGS_Visu) $(VCCFLAGS_Visu) -p Visu -sfas
-LFNT_OBJECTS_Visu=$(TEMP_PATH_Visu)/lfnt.de.vco $(TEMP_PATH_Visu)/lfnt.pl.vco 
+LFNT_OBJECTS_Visu=$(TEMP_PATH_Visu)/lfnt.en.vco $(TEMP_PATH_Visu)/lfnt.pl.vco 
 
 #Runtime Object
 $(VCR_OBJECT_Visu) : $(VCR_SOURCE_Visu)
@@ -283,6 +976,7 @@ $(TEMP_PATH_Visu)/Visu01.ccf: $(LIB_SHARED) $(SHARED_CCF) $(LIB_BMP_RES_Visu) $(
 	@$(VCFLGEN) '$@.lfl' '$(VCR_OBJECT_Visu:.vco=.vco|)' -temp '$(TEMP_PATH_Visu)' -prj '$(PRJ_PATH_Visu)' -sfas
 	@$(VCFLGEN) '$@.lfl' -mask .tdc -vcp '$(AS_PROJECT_PATH)/Logical/Visu/Package.vcp' -temp '$(TEMP_PATH_Visu)' -prj '$(PRJ_PATH_Visu)' -sfas
 	@$(VCFLGEN) '$@.lfl' -mask .trd -vcp '$(AS_PROJECT_PATH)/Logical/Visu/Package.vcp' -temp '$(TEMP_PATH_Visu)' -prj '$(PRJ_PATH_Visu)' -sfas
+	@$(VCFLGEN) '$@.lfl' '$(TEMP_PATH_Visu)/tre.Trend_Temperature.vco' -temp '$(TEMP_PATH_Visu)' -prj '$(PRJ_PATH_Visu)' -sfas
 	@$(VCFLGEN) '$@.lfl' '$(SCR_OBJECTS_Visu:.vco=.vco|)' -temp '$(TEMP_PATH_Visu)' -prj '$(PRJ_PATH_Visu)' -sfas
 	$(LINK) '$@.lfl' -o '$@' -p Visu -lib '$(LIB_LOCAL_OBJ_Visu)' -P '$(AS_PROJECT_PATH)' -m 'local objects' -profile 'False' -warningLevel2 -vcr 4722 -sfas
 # 01 Module END
@@ -311,3 +1005,11 @@ $(TEMP_PATH_Visu)/Visu03.ccf: $(LIB_SHARED) $(SHARED_CCF) $(BMGRP_OBJECTS_Visu) 
 	$(LINK) '$@.lfl' -o '$@' -p Visu -lib '$(LIB_BMP_RES_Visu)' -P '$(AS_PROJECT_PATH)' -m 'bitmap resources' -profile 'False' -warningLevel2 -vcr 4722 -sfas
 # 03 Module END
 
+# Post Build Steps
+
+.PHONY : vcPostBuild_Visu
+
+vcPostBuild_Visu :
+	$(VCC) -pb -vcm '$(TEMP_PATH_Visu)/MODULEFILES.vcm' -fw '$(VCFIRMWAREPATH)' $(VCCFLAGS_Visu) -p Visu -vcr 4722 -sfas
+
+# Post Build Steps END

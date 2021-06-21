@@ -12,7 +12,7 @@
     <Property Name="Description" Value=""/>
     <Property Name="Index" Value="65535"/>
     <TextSnippets/>
-    <TextLayer LanguageId="pl">
+    <TextLayer LanguageId="en">
       <Text ID="259" Value="watt"/>
       <Text ID="260" Value="W"/>
       <Text ID="261" Value="kilowatt"/>
@@ -29,6 +29,15 @@
       <Text ID="7583" Value=""/>
       <Text ID="7584" Value=""/>
       <Text ID="87034" Value="Watt"/>
+    </TextLayer>
+    <TextLayer LanguageId="pl">
+      <Text ID="259" Value="watt"/>
+      <Text ID="260" Value="W"/>
+      <Text ID="261" Value="kilowatt"/>
+      <Text ID="262" Value="kW"/>
+      <Text ID="7583" Value=""/>
+      <Text ID="7584" Value=""/>
+      <Text ID="87034" Value="watt"/>
     </TextLayer>
     <IndexMap>
       <Index ID="259" Value="1"/>

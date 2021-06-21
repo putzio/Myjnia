@@ -1,0 +1,23 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=Program 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=250 Type=0 Scope=0 Force=0 Index=19 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                                   TON_1                                      TON    0 "                                                               *"    0   24    1    0    1    1         
+                                      IN                                     BOOL    0 "                                                            TRUE"    1    1    1    2    0    0         
+                                      PT                                     TIME    0 "                                                           T#40s"    1   12    1    1    0    0         
+                                       Q                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                      ET                                     TIME    0 "                                                           T#0ms"    1   12    1    1    0    0         
+                               StartTime                                     TIME    0 "                                                 T#14m_16s_040ms"    1   12    1    1    0    0         
+                                       M                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                 Restart                                    UDINT    0 "                                                               2"    1    7    1   10    0    0         
+                            cabin_heater                                     BOOL    0 "                                                            TRUE"    0    1    1    2    1    0         
+                              cabin_temp                                      INT    0 "                                                               0"    0    3    1   10    1    0         
+                                    coin                                    USINT    0 "                                                               0"    0    5    1   10    1    0         
+                         demi_water_pump                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                               foam_pump                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                                programm                                      INT    0 "                                                               0"    0    3    1   10    1    0         
+                              shine_pump                                     BOOL    0 "                                                            TRUE"    0    1    1    2    1    0         
+                                    time                                     DINT    0 "                                                               0"    0    4    1   10    1    0         
+                            water_heater                                     BOOL    0 "                                                            TRUE"    0    1    1    2    1    0         
+                              water_pump                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                              water_temp                                      INT    0 "                                                               0"    0    3    1   10    1    0         
+                                wax_pump                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
